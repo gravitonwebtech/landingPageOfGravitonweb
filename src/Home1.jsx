@@ -1485,10 +1485,11 @@ export default function Home1() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5  mx-5 md:mx-20 lg:mx-30 mt-10 md:mt-20">
-            <div className="p-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 md:gap-10  
+          mx-5 md:mx-20 lg:mx-30 mt-10 md:mt-12">
+           
               <div
-                className="rounded-lg p-8"
+                className="rounded-lg p-5"
                 style={{
                   background:
                     "linear-gradient(180deg, #F8F9C9 0%, #0A4D68 0.01%, #05BFDB 100%)",
@@ -1508,12 +1509,13 @@ export default function Home1() {
                     <b>akrati.verma@gravitonweb.com</b>
                   </p>
                 </div>
-              </div>
-            </div>
 
-            <div className="p-4">
+              </div>
+           
+
+            
               <div
-                className="rounded-lg p-8"
+                className="rounded-lg p-5"
                 style={{
                   background:
                     "linear-gradient(180deg, #F8F9C9 0%, #0A4D68 0.01%, #05BFDB 100%)",
@@ -1534,11 +1536,11 @@ export default function Home1() {
                   </p>
                 </div>
               </div>
-            </div>
+            
 
-            <div className="p-4">
+          
               <div
-                className="rounded-lg p-8"
+                className="rounded-lg p-5"
                 style={{
                   background:
                     "linear-gradient(180deg, #F8F9C9 0%, #0A4D68 0.01%, #05BFDB 100%)",
@@ -1560,7 +1562,7 @@ export default function Home1() {
                   </p>
                 </div>
               </div>
-            </div>
+           
           </div>
         </div>
 
