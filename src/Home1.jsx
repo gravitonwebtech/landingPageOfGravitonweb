@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { MdLocationOn, MdCall, MdOutlineMailOutline } from "react-icons/md";
 import "./Home1.css";
 import Slider from "react-slick";
@@ -14,9 +14,23 @@ import secondheading from "./images/secondheading2.svg";
 import thirdcertificate from "./images/certificate3.svg";
 import trainingthirdImage from "./images/trainingthirdImage.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar, faPlus, faMinus,faCheck,faLongArrowAltRight,faCheckCircle } from "@fortawesome/free-solid-svg-icons";
+import { faStar, faPlus, faMinus,faCheck,faLongArrowAltRight,faCheckCircle,faVideo  } from "@fortawesome/free-solid-svg-icons";
+import { faCalendarCheck,faHourglass,faClock} from '@fortawesome/free-regular-svg-icons';
 import CountUp from "react-countup";
 import emailjs from '@emailjs/browser';
+import prateek from "./images/prateekCapture.PNG";
+import Mansi from "./images/mansiCapture.PNG";
+import nilanshi from "./images/nilanshiCapture.PNG";
+import avdhesh from "./images/avdheshCapture.PNG";
+import rishbh from "./images/rishabhCapture.PNG";
+import ashish from "./images/ashishCapture.PNG";
+import amiya from "./images/amiyaCapture.PNG";
+import manan from "./images/mananCapture.PNG";
+import mithali from "./images/mithaliCapture.PNG";
+import WebTalentPdf from "./images/Web Talent Gravity.pdf";
+import webtalentImgPdf from "./images/webtalentScreensort.PNG";
+import DigitalGravityPdf from "./images/Digital Gravity Purposal__.pdf";
+import digitalgravityImgPdf from "./images/digitalgravityScreensort.PNG";
 
 export default function Home1() {
   const phoneNumber = "+919415174046";
@@ -155,6 +169,32 @@ export default function Home1() {
       }))
     );
   };
+  const [currentTime, setCurrentTime] = useState(new Date());
+  const [displayTime, setDisplayTime] = useState('');
+ 
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentTime(new Date());
+    }, 1000);
+ 
+    return () => clearInterval(intervalId);
+  }, []);
+ 
+  useEffect(() => {
+    const currentHour = currentTime.getHours();
+    const currentMinute = currentTime.getMinutes();
+ 
+    if (currentHour < 17 || (currentHour === 17 && currentMinute === 0)) {
+      // Show today's time
+      setDisplayTime(currentTime.toLocaleTimeString());
+    } else {
+      // Show next day's time
+      const tomorrow = new Date(currentTime);
+      tomorrow.setDate(currentTime.getDate() + 1);
+      tomorrow.setHours(17, 0, 0, 0);
+      setDisplayTime(tomorrow.toLocaleTimeString());
+    }
+  }, [currentTime]);
   return (
     <>
       <div
@@ -266,6 +306,7 @@ export default function Home1() {
               data-id="efb5660"
               data-settings='{"container_type":"flex","content_width":"boxed"}'
             >
+              <h1 className="font-bold text-2xl md:text-4xl lg:text-5xl">Free</h1>
               <div className="e-con-inner">
                 <div
                   className="elementor-element elementor-element-784e9534 e-con-full e-flex e-con e-parent"
@@ -274,6 +315,7 @@ export default function Home1() {
                   data-id="784e9534"
                   data-settings='{"content_width":"full","container_type":"flex"}'
                 >
+                
                   <div
                     className="elementor-element elementor-element-1414598f e-con-full e-flex e-con e-parent"
                     data-core-v316-plus="true"
@@ -291,13 +333,10 @@ export default function Home1() {
                         <ul className="elementor-icon-list-items elementor-inline-items">
                           <li className="elementor-icon-list-item elementor-inline-item">
                             <span className="elementor-icon-list-icon">
-                              <i
-                                aria-hidden="true"
-                                className="far fa-calendar-check"
-                              />{" "}
+                            <FontAwesomeIcon icon={faCalendarCheck} aria-hidden="true" className="far fa-calendar-check" />
                             </span>
                             <span className="elementor-icon-list-text">
-                              On November 26, 2023
+                            {displayTime}
                             </span>
                           </li>
                         </ul>
@@ -314,13 +353,10 @@ export default function Home1() {
                         <ul className="elementor-icon-list-items elementor-inline-items">
                           <li className="elementor-icon-list-item elementor-inline-item">
                             <span className="elementor-icon-list-icon">
-                              <i
-                                aria-hidden="true"
-                                className="far fa-hourglass"
-                              />{" "}
+                            <FontAwesomeIcon icon={faHourglass} aria-hidden="true" className="far fa-hourglass" />
                             </span>
                             <span className="elementor-icon-list-text">
-                              3+ Hours
+                              45Mins
                             </span>
                           </li>
                         </ul>
@@ -337,7 +373,7 @@ export default function Home1() {
                         <ul className="elementor-icon-list-items elementor-inline-items">
                           <li className="elementor-icon-list-item elementor-inline-item">
                             <span className="elementor-icon-list-icon">
-                              <i aria-hidden="true" className="fas fa-video" />{" "}
+                            <FontAwesomeIcon icon={faVideo} aria-hidden="true" className="fas fa-video" />
                             </span>
                             <span className="elementor-icon-list-text">
                               Live Session
@@ -357,7 +393,7 @@ export default function Home1() {
                         <ul className="elementor-icon-list-items elementor-inline-items">
                           <li className="elementor-icon-list-item elementor-inline-item">
                             <span className="elementor-icon-list-icon">
-                              <i aria-hidden="true" className="far fa-clock" />{" "}
+                            <FontAwesomeIcon icon={faClock} aria-hidden="true" className="far fa-clock" />
                             </span>
                             <span className="elementor-icon-list-text">
                               11:00 am Onwards
@@ -381,7 +417,7 @@ export default function Home1() {
                           <FontAwesomeIcon icon={faLongArrowAltRight} />
                           </span>
                           <span className="elementor-icon-list-text">
-                            Frontend Dev: Create awesome websites!
+                           <b>Frontend Dev : </b>Create awesome websites!
                           </span>
                         </li>
                         <li className="elementor-icon-list-item">
@@ -389,7 +425,7 @@ export default function Home1() {
                           <FontAwesomeIcon icon={faLongArrowAltRight} />
                           </span>
                           <span className="elementor-icon-list-text">
-                            Logical Training: Boost problem-solving skills.
+                            <b>Logical Training : </b>Boost problem-solving skills.
                           </span>
                         </li>
                         <li className="elementor-icon-list-item">
@@ -397,7 +433,7 @@ export default function Home1() {
                           <FontAwesomeIcon icon={faLongArrowAltRight} />
                           </span>
                           <span className="elementor-icon-list-text">
-                            Live Projects: Hands-on experience.
+                            <b>Live Projects : </b>Hands-on experience.
                           </span>
                         </li>
                         <li className="elementor-icon-list-item">
@@ -405,7 +441,7 @@ export default function Home1() {
                           <FontAwesomeIcon icon={faLongArrowAltRight} />
                           </span>
                           <span className="elementor-icon-list-text">
-                            AI Accelerate: Explore AI in web development.
+                           <b>AI Accelerate : </b>Explore AI in web development.
                           </span>
                         </li>
                         <li className="elementor-icon-list-item">
@@ -413,7 +449,7 @@ export default function Home1() {
                           <FontAwesomeIcon icon={faLongArrowAltRight} />
                           </span>
                           <span className="elementor-icon-list-text">
-                            Pro Training: Learn from experts.
+                           <b>Pro Training : </b>Learn from experts.
                           </span>
                         </li>
                         <li className="elementor-icon-list-item">
@@ -421,7 +457,7 @@ export default function Home1() {
                           <FontAwesomeIcon icon={faLongArrowAltRight} />
                           </span>
                           <span className="elementor-icon-list-text">
-                            Certificate: Get validated!
+                            <b>Certificate : </b>Get validated!
                           </span>
                         </li>
                         <li className="elementor-icon-list-item">
@@ -429,7 +465,7 @@ export default function Home1() {
                           <FontAwesomeIcon icon={faLongArrowAltRight} />
                           </span>
                           <span className="elementor-icon-list-text">
-                            100% Placement: Kickstart your
+                           <b>100% Placement : </b>Kickstart your
                           </span>
                         </li>
                       </ul>
@@ -1137,11 +1173,13 @@ export default function Home1() {
           </div>
         </div>
 
-        <div className=" flex justify-center mt-10">
-          <h1 className="font-semibold">SERVICES</h1>
+        {/* services-section */}
+
+        <div className="flex justify-center mt-10">
+          <h1 className="font-bold text-2xl md:text-4xl lg:text-5xl">SERVICES</h1>
         </div>
 
-        <div className=" grid grid-cols-1 md:grid-cols-3 gap-5  mx-5 md:mx-20 lg:mx-28 mt-5 md:mt-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5  mx-5 md:mx-20 lg:mx-28 mt-5 md:mt-10">
           <div className="border-2 rounded-2xl mb-4 bg-[#C8E4FF]">
             <h1
               className="text-white p-4 text-2xl md:text-3xl"
@@ -1173,7 +1211,7 @@ export default function Home1() {
               LOGICAL PRACTICE
             </h1>
 
-            <ol className=" font-semibold p-4 mt-4">
+            <ol className="font-medium p-4 mt-4">
               <li className="">1. Puzzle Solving</li>
               <li className="">2. Deductive Reasoning</li>
               <li className="">3. Pattern Recognition</li>
@@ -1192,7 +1230,7 @@ export default function Home1() {
               AI ACCELERATE
             </h1>
 
-            <ol className=" font-semibold p-4 mt-4">
+            <ol className="font-medium p-4 mt-4">
               <li className="">1. Free Course Certificate</li>
               <li className="">2. Path of Frontent Developement</li>
               <li className="">3. Professional Training</li>
@@ -1211,7 +1249,7 @@ export default function Home1() {
               LIVE PROJECT
             </h1>
 
-            <ol className=" font-semibold p-4 mt-4">
+            <ol className="font-medium p-4 mt-4">
               <li className="">1. Real World Application</li>
               <li className="">2. Exeperienced Instructor</li>
               <li className="">3. Skill Enhancement</li>
@@ -1230,7 +1268,7 @@ export default function Home1() {
               PROFESSIONAL TRAINING
             </h1>
 
-            <ol className="font-semibold p-4 mt-4">
+            <ol className="font-medium  p-4 mt-4">
               <li className="">1. Portfolio Creation </li>
               <li className="">2. Resume Enhancer</li>
               <li className="">3. GitHub Walkthrough </li>
@@ -1249,7 +1287,7 @@ export default function Home1() {
               PLACEMENT ASSURANCE
             </h1>
 
-            <p className=" font-semibold text-justify p-4 mt-4">
+            <p className="font-medium text-justify p-4 mt-4">
               Completed the latest industry- approved courses to stay updated.
               Focused on placement training.Handle Interview with case. Get
               unique opportunities to sit for interview with care companies
@@ -1267,12 +1305,425 @@ export default function Home1() {
               EXPERIENCE CERTIFICATE
             </h1>
 
-            <ol className="font-semibold p-4 mt-4">
+            <ol className="font-medium  p-4 mt-4">
               <li className="">1. 3 Month Experience Certificate </li>
               <li className="">2. AI Accelerate Certificate</li>
             </ol>
           </div>
         </div>
+
+
+      {/* hear-student-section */}
+
+      <div className="mt-10 md:mt-20 mx-10 md:mx-20 lg:mx-28">
+        <h1
+          className=" font-bold text-2xl md:text-4xl lg:text-5xl"
+        >
+          HEAR FROM OUR
+          <br /> STUDENTS
+          <p className="border-t-8 border-[#262566] w-[50%]  md:w-[20%]  my-3 "></p>
+        </h1>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-12  gap-5 mx-10 md:mx-20 lg:mx-32  mt-10 md:mt-16">
+        <div className="md:col-span-5 md:mt-5">
+          <h1
+            className="text-[#0984F5] font-semibold  text-xl md:text-3xl "
+            style={{ fontFamily: "Poppins" }}
+          >
+            Ankit Singh
+          </h1>
+          <i className="text-xl font-bold">Web Designer</i>
+          <p
+            className="text-[#494949] text-lg  text-justify  mt-3"
+            style={{ fontFamily: "Poppins" }}
+          >
+            I can't express how much <b>WebTalentGravity</b> has changed my
+            career. The instructors are topnotch, the courses are incredibly
+            informative, and the community is so supportive. Thanks to their
+            training, I've grown from a novice to a confident web designer. The
+            best part? I landed my dream job right after graduation.{" "}
+            <b>WebTalentGravity</b> is the real deal!
+          </p>
+        </div>
+
+        <div className="md:col-span-2 flex justify-center items-center">
+          <div className="hidden  md:block  border-l-4 border-[#262566] h-[100%] md:h-[90%] md:ml-14"></div>
+        </div>
+        <div className=" block md:hidden border-t-4 border-[#262566] w-[100%] md:w-[80%]  "></div>
+
+        <div className="md:col-span-5 md:mt-5">
+          <h1
+            className="text-[#0984F5] font-semibold  text-xl md:text-3xl "
+            style={{ fontFamily: "Poppins" }}
+          >
+            Prachi Sharma
+          </h1>
+          <i className="text-xl font-bold">App Developer</i>
+          <p
+            className="text-[#494949] text-lg  text-justify  mt-3"
+            style={{ fontFamily: "Poppins" }}
+          >
+            Learning both iOS and Android app development at{" "}
+            <b>WebTalentGravity</b> was a game-changer. The instructors provided
+            practical insights, and I was able to work on real app projects.
+            Now, I'm a successful app developer with my own app on the market.
+            If you're serious about app development, this is the place to be.
+          </p>
+        </div>
+
+        <div className=" block md:hidden border-t-4 border-[#262566] w-[100%] md:w-[80%] mt-5 "></div>
+        <div className="md:col-span-5 md:mt-5">
+          <h1
+            className="text-[#0984F5] font-semibold  text-xl md:text-3xl "
+            style={{ fontFamily: "Poppins" }}
+          >
+            Mansi Singh
+          </h1>
+          <i className="text-xl font-bold">AI Enthusiast</i>
+          <p
+            className="text-[#494949] text-lg  text-justify  mt-3"
+            style={{ fontFamily: "Poppins" }}
+          >
+            <b>WebTalentGravity's</b> AI program was nothing short of amazing.
+            The curriculum was wellstructured, and the hands-on experience was
+            invaluable. I joined as someone with a curiosity for AI and left
+            with a deep understanding of machine learning and AI applications.
+            I'm now pursuing a master's in AI, all thanks to{" "}
+            <b>WebTalentGravity</b>.
+          </p>
+        </div>
+
+        <div className="md:col-span-2 flex justify-center items-center">
+          <div className="hidden  md:block  border-l-4 border-[#262566] h-[100%] md:h-[90%] md:ml-14"></div>
+        </div>
+        <div className=" block md:hidden border-t-4 border-[#262566] w-[100%] md:w-[80%]  md:mt-14 "></div>
+
+        <div className="md:col-span-5 md:mt-5">
+          <h1
+            className="text-[#0984F5] font-semibold  text-xl md:text-3xl "
+            style={{ fontFamily: "Poppins" }}
+          >
+            Ankush Mishra
+          </h1>
+          <i className="text-xl font-bold">Freelancer Developer</i>
+          <p
+            className="text-[#494949] text-lg  text-justify  mt-3"
+            style={{ fontFamily: "Poppins" }}
+          >
+            What I loved most about <b>WebTalentGravity</b> was the flexibility.
+            I could choose my learning format, access resources online, and
+            create my own schedule. It allowed me to continue working while
+            enhancing my skills. Today, I'm a successful freelance developer,
+            and it's all thanks to the convenience <b>WebTalentGravity</b>{" "}
+            offered.
+          </p>
+        </div>
+
+        <div className=" block md:hidden border-t-4 border-[#262566] w-[100%] md:w-[80%] mt-5 "></div>
+        <div className="md:col-span-5  md:mt-5 ">
+          <h1
+            className="text-[#0984F5] font-semibold  text-xl md:text-3xl "
+            style={{ fontFamily: "Poppins" }}
+          >
+            Avyan Sharma
+          </h1>
+          <i className="text-xl font-bold">Entrepreneur</i>
+          <p
+            className="text-[#494949] text-lg  text-justify  mt-3"
+            style={{ fontFamily: "Poppins" }}
+          >
+            I came to <b>WebTalentGravity</b> with an idea for a tech startup.
+            The guidance and mentorship I received were invaluable. I learned
+            the technical skills to build our platform and received valuable
+            business insights. Today, my startup is thriving, and it all started
+            at <b>WebTalentGravity</b>.
+          </p>
+        </div>
+
+        <div className="md:col-span-2 flex justify-center items-center">
+          <div className="hidden  md:block  border-l-4 border-[#262566] h-[100%] md:h-[90%] md:ml-14"></div>
+        </div>
+        <div className=" block md:hidden border-t-4 border-[#262566] w-[100%] md:w-[80%]  md:mt-14 "></div>
+
+        <div className="md:col-span-5 md:mt-5">
+          <h1
+            className="text-[#0984F5] font-semibold  text-xl md:text-3xl "
+            style={{ fontFamily: "Poppins" }}
+          >
+            Ravi Bajaj
+          </h1>
+          <i className="text-xl font-bold">IT Manager</i>
+          <p
+            className="text-[#494949] text-lg  text-justify  mt-3"
+            style={{ fontFamily: "Poppins" }}
+          >
+            <b>WebTalentGravity</b> offers the flexibility that professionals
+            like me need. I could balance my full- time job and take evening
+            classes. The skills I learned helped me advance in my career.
+            Whether you're a beginner or an experienced tech professional,{" "}
+            <b>WebTalentGravity</b> has something for everyone
+          </p>
+        </div>
+      </div>
+
+        {/* placed section */}
+
+        <div className="mt-10 md:mt-20 mx-10 md:mx-20 lg:mx-28">
+        <h1
+          className=" font-bold  text-2xl md:text-4xl lg:text-5xl "
+        >
+          RECENTLY PLACED
+          <br /> STUDENTS
+          <p className="border-t-8 border-[#262566] w-[50%]  md:w-[20%]  my-3 "></p>
+        </h1>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mx-10 md:mx-20 lg:mx-28  mt-10 md:mt-16">
+        <div>
+          <div className="flex justify-center">
+            <img src={prateek} />
+          </div>
+          <div className="text-center">
+            <h1
+              className="text-[#0984F5] font-semibold  text-xl md:text-3xl mt-4 "
+              style={{ fontFamily: "Poppins" }}
+            >
+              Prateek Mehta
+            </h1>
+            <i className="text-xl font-bold">IT Manager</i>
+            <br />
+            <i className="text-xl font-semibold">Placed in Wipro</i>
+          </div>
+        </div>
+
+        <div>
+          <div className="flex justify-center">
+            <img src={Mansi} />
+          </div>
+          <div className="text-center">
+            <h1
+              className="text-[#0984F5] font-semibold  text-xl md:text-3xl mt-4 "
+              style={{ fontFamily: "Poppins" }}
+            >
+              Mansi Singh
+            </h1>
+            <i className="text-xl font-bold">UI/UX Designer</i>
+            <br />
+            <i className="text-xl font-semibold">Placed in Deloitte</i>
+          </div>
+        </div>
+
+        <div>
+          <div className="flex justify-center">
+            <img src={nilanshi} />
+          </div>
+          <div className="text-center">
+            <h1
+              className="text-[#0984F5] font-semibold  text-xl md:text-3xl mt-4 "
+              style={{ fontFamily: "Poppins" }}
+            >
+              Nilanshi
+            </h1>
+            <i className="text-xl font-bold">Software Engineer</i>
+            <br />
+            <i className="text-xl font-semibold">Placed in Jio Tech</i>
+          </div>
+        </div>
+
+        <div className="mt-5">
+          <div className="flex justify-center">
+            <img src={avdhesh} />
+          </div>
+          <div className="text-center">
+            <h1
+              className="text-[#0984F5] font-semibold  text-xl md:text-3xl mt-4 "
+              style={{ fontFamily: "Poppins" }}
+            >
+              Avdhesh Singh
+            </h1>
+            <i className="text-xl font-bold">Frontend Developer</i>
+            <br />
+            <i className="text-xl font-semibold">Placed in PlanetSpark</i>
+          </div>
+        </div>
+
+        <div className="mt-5">
+          <div className="flex justify-center">
+            <img src={rishbh} />
+          </div>
+          <div className="text-center">
+            <h1
+              className="text-[#0984F5] font-semibold  text-xl md:text-3xl mt-4 "
+              style={{ fontFamily: "Poppins" }}
+            >
+              Rishabh Kumar
+            </h1>
+            <i className="text-xl font-bold">Software Engineer</i>
+            <br />
+            <i className="text-xl font-semibold">Placed in HCL</i>
+          </div>
+        </div>
+
+        <div className="mt-5">
+          <div className="flex justify-center">
+            <img src={ashish} />
+          </div>
+          <div className="text-center">
+            <h1
+              className="text-[#0984F5] font-semibold  text-xl md:text-3xl mt-4 "
+              style={{ fontFamily: "Poppins" }}
+            >
+              Ashish Singh
+            </h1>
+            <i className="text-xl font-bold">Android Developer</i>
+            <br />
+            <i className="text-xl font-semibold">Placed in Capegemini</i>
+          </div>
+        </div>
+
+        <div className="mt-5">
+          <div className="flex justify-center">
+            <img src={amiya} />
+          </div>
+          <div className="text-center">
+            <h1
+              className="text-[#0984F5] font-semibold  text-xl md:text-3xl mt-4 "
+              style={{ fontFamily: "Poppins" }}
+            >
+              Amiya Mishra
+            </h1>
+            <i className="text-xl font-bold">Software Engineer</i>
+            <br />
+            <i className="text-xl font-semibold">Placed in Cognizant</i>
+          </div>
+        </div>
+
+        <div className="mt-5">
+          <div className="flex justify-center">
+            <img src={manan} />
+          </div>
+          <div className="text-center">
+            <h1
+              className="text-[#0984F5] font-semibold  text-xl md:text-3xl mt-4 "
+              style={{ fontFamily: "Poppins" }}
+            >
+              Manan Sharma
+            </h1>
+            <i className="text-xl font-bold">Web Designer</i>
+            <br />
+            <i className="text-xl font-semibold">Placed in TCS</i>
+          </div>
+        </div>
+
+        <div className="mt-5">
+          <div className="flex justify-center">
+            <img src={mithali} />
+          </div>
+          <div className="text-center">
+            <h1
+              className="text-[#0984F5] font-semibold  text-xl md:text-3xl mt-4 "
+              style={{ fontFamily: "Poppins" }}
+            >
+              Mithali Raj
+            </h1>
+            <i className="text-xl font-bold">FullStack Developer</i>
+            <br />
+            <i className="text-xl font-semibold">Placed in Wipro</i>
+          </div>
+        </div>
+      </div>
+
+        {/* pdf */}
+       <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 mt-5 mx-5 md:mx-20 lg:mx-28">
+        <div
+          className="pdf-container overflow-x-hidden bg-white w-full p-10 rounded-lg shadow-md hidden xl:block "
+          style={{ backgroundColor: "white", width: "100%" }}
+        >
+          <iframe
+            src={WebTalentPdf + "#toolbar=0"}
+            title="PDF Viewer 1"
+            width="100%"
+            height="400px"
+            frameBorder="0"
+          />
+ 
+          <div className="mt-10 text-center">
+            <a
+              href={WebTalentPdf}
+              download="WebTalentBouchers.pdf"
+              className="bg-gradient-to-r from-teal-800 to-blue-500 px-5 py-2
+           rounded-[4px] text-white font-semibold text-xl"
+            >
+              <button>Download PDF</button>
+            </a>
+          </div>
+        </div>
+ 
+        <div
+          className="pdf-container overflow-x-hidden bg-white w-full p-10 rounded-lg shadow-md  hidden xl:block "
+          style={{ backgroundColor: "white", width: "100%" }}
+        >
+          <iframe
+            src={DigitalGravityPdf + "#toolbar=0"}
+            title="PDF Viewer 1"
+            width="100%"
+            height="400px"
+            frameBorder="0"
+          />
+ 
+          <div className="mt-10 text-center">
+            <a
+              href={DigitalGravityPdf}
+              download="DigitalGravityBouchers.pdf"
+              className="bg-gradient-to-r from-teal-800 to-blue-500 px-5 py-2
+              rounded-[4px] text-white font-semibold text-xl"
+            >
+              <button>Download PDF</button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 mt-5 mx-5 md:mx-20 lg:mx-28">
+        <div
+          className="pdf-container overflow-x-hidden bg-white w-full p-10 rounded-lg shadow-md block md:hidden"
+          style={{ backgroundColor: "white", width: "100%" }}
+        >
+          <img src={webtalentImgPdf}></img>
+
+          <div className="mt-10 text-center">
+            <a
+              href={WebTalentPdf}
+              download="WebTalentBouchers.pdf"
+              className="bg-gradient-to-r from-teal-800 to-blue-500 px-5 py-2
+              rounded-[4px] text-white font-semibold text-xl"
+            >
+              <button>Download PDF</button>
+            </a>
+          </div>
+        </div>
+
+        <div
+          className="pdf-container overflow-x-hidden bg-white w-full p-10 rounded-lg shadow-md block md:hidden"
+          style={{ backgroundColor: "white", width: "100%" }}
+        >
+          <img src={digitalgravityImgPdf}></img>
+
+          <div className="mt-10 text-center">
+            <a
+              href={DigitalGravityPdf}
+              download="DigitalGravityBouchers.pdf"
+              className="bg-gradient-to-r from-teal-800 to-blue-500 px-5 py-2
+              rounded-[4px] text-white font-semibold text-xl"
+            >
+              <button>Download PDF</button>
+            </a>
+          </div>
+        </div>
+      </div>
+      {/* pdf */}
+
 
         <div class="min-w-screen min-h-screen flex items-center justify-center px-5 py-5 mt-5">
           <div
