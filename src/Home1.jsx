@@ -34,6 +34,8 @@ import digitalgravityImgPdf from "./images/digitalgravityScreensort.PNG";
 
 export default function Home1() {
   const phoneNumber = "+919415174046";
+  const [showPopup, setShowPopup] = useState(true);
+
   const [values, setValue] = useState({
     name: "",
     textarea: "",
@@ -47,6 +49,19 @@ export default function Home1() {
   }
   
   const [errors, setErrors] = useState({});
+
+  useEffect(() => {
+    const hasSeenPopup = localStorage.getItem('hasSeenPopup');
+    if (!hasSeenPopup) {
+      setShowPopup(true);
+      localStorage.setItem('hasSeenPopup', 'true');
+    }
+  }, []);
+
+  const handleClosePopup = () => {
+    setShowPopup(false);
+    resetForm();
+  };
 
   const form = useRef();
   const sendEmail = (e) => {
@@ -75,6 +90,7 @@ export default function Home1() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    console.log("Form Data:", values);
 
     const validationErrors = validateForm(values);
     if (Object.keys(validationErrors).length === 0) {
@@ -140,35 +156,7 @@ export default function Home1() {
     WebtechSlideSettings1.slidesToShow = 1;
   }
 
-  const [accordionItems, setAccordionItems] = useState([
-    {
-      title: "why choose Gravitonweb  Technologies ?",
-      content:
-        "Gravitonweb Technologies is committed to helping its students to reach their goals and their training experiences, by providing the innovative surroundings and faculties.",
-      isOpen: false,
-    },
-    {
-      title: "Get Started ?",
-      content:
-        "On our all-inclusive tech-driven trading platform by signing up and logging in to your broking account.",
-      isOpen: false,
-    },
-    {
-      title: "Factor In The Risk ?",
-      content:
-        "Stay shielded from market volatality and turbulences by adding in your specific risk appetite into the trading algorithm equation and our systems will take care of the rest.",
-      isOpen: false,
-    },
-  ]);
-
-  const toggleAccordion = (index) => {
-    setAccordionItems((prevItems) =>
-      prevItems.map((item, i) => ({
-        ...item,
-        isOpen: i === index ? !item.isOpen : false,
-      }))
-    );
-  };
+  // timer
   const [currentTime, setCurrentTime] = useState(new Date());
   const [displayTime, setDisplayTime] = useState('');
  
@@ -197,6 +185,119 @@ export default function Home1() {
   }, [currentTime]);
   return (
     <>
+
+
+      {/* popupfrom */}
+      {showPopup && (
+        <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 z-50">
+          <div className="bg-white p-8 rounded-lg shadow-md">
+            <div className="relative">
+              <button
+                onClick={handleClosePopup}
+                className="absolute top-0 right-0 -mt-6 -mr-6 text-gray-500 hover:text-black focus:outline-none"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M14.35 5.64a1 1 0 0 1 1.42 1.42L11.41 10l4.36 4.36a1 1 0 1 1-1.42 1.42L10 11.41l-4.36 4.36a1 1 0 0 1-1.42-1.42L8.59 10 4.22 5.64a1 1 0 0 1 1.42-1.42L10 8.59l4.36-4.36z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </button>
+            </div>
+            <form onSubmit={handleSubmit}>
+              <h1 className="font-bold text-2xl md:text-3xl">Let's Connect</h1>
+
+              <div className="mt-5">
+                <input
+                  type="text"
+                  id="name"
+                  className={`w-[200px] md:w-[400px] px-5 py-2 border rounded-[4px] border-gray-400 ${
+                    errors.name ? 'border-red-500' : ''
+                  }`}
+                  required
+                  placeholder="Name"
+                  onChange={inputHandle}
+                  name="name"
+                  value={values.name}
+                />
+                {errors.name && (
+                  <p className="text-red-500 text-sm mt-1">{errors.name}</p>
+                )}
+              </div>
+
+              <div className="mt-5">
+                <input
+                  type="text"
+                  id="email"
+                  className={`w-[200px] md:w-[400px] px-5 py-2 border rounded-[4px] border-gray-400 ${
+                    errors.email ? 'border-red-500' : ''
+                  }`}
+                  required
+                  placeholder="Email"
+                  onChange={inputHandle}
+                  name="email"
+                  value={values.email}
+                />
+                {errors.email && (
+                  <p className="text-red-500 text-sm mt-1">{errors.email}</p>
+                )}
+              </div>
+
+              <div className="mt-5">
+                <input
+                  type="text"
+                  id="pnum"
+                  className={`w-[200px] md:w-[400px] px-5 py-2 border rounded-[4px] border-gray-400 ${
+                    errors.phone ? 'border-red-500' : ''
+                  }`}
+                  required
+                  placeholder="Phone"
+                  onChange={inputHandle}
+                  name="phone"
+                  value={values.phone}
+                />
+                {errors.phone && (
+                  <p className="text-red-500 text-sm mt-1">{errors.phone}</p>
+                )}
+              </div>
+
+              <div className="mt-5">
+                <textarea
+                  placeholder="Message"
+                  rows="3"
+                  className={`w-[200px] w-full md:w-[400px] px-5 py-2 border rounded-[4px] border-gray-400 ${
+                    errors.textarea ? 'border-red-500' : ''
+                  }`}
+                  required
+                  onChange={inputHandle}
+                  name="textarea"
+                  value={values.textarea}
+                />
+                {errors.textarea && (
+                  <p className="text-red-500 text-sm mt-1">
+                    {errors.textarea}
+                  </p>
+                )}
+              </div>
+
+              <div className="mt-5 flex justify-center">
+                <button
+                  type="submit"
+                  className="px-5 py-2 text-black border-2 rounded-[4px] border-[#05BFDB]"
+                >
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
       <div
         className="elementor elementor-34120 elementor-location-single post-12492 page type-page status-publish has-post-thumbnail lp-category-ai-tools-retro ast-article-single remove-featured-img-padding"
         data-elementor-id="34120"
