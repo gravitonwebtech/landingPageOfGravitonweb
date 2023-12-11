@@ -87,9 +87,17 @@ export default function Home1() {
      window.open(whatsappUrl, "_blank");
      resetForm();
   };
-
+  const Popform = useRef();
   const handleSubmit = (event) => {
     event.preventDefault();
+    
+    emailjs
+      .sendForm(
+        "service_fou94i9",
+        "template_cido1v7",
+        Popform.current,
+        "jwkvXtuG3BVhmwYVq"
+      )
     console.log("Form Data:", values);
 
     const validationErrors = validateForm(values);
@@ -210,7 +218,7 @@ export default function Home1() {
                 </svg>
               </button>
             </div>
-            <form onSubmit={handleSubmit}>
+            <form ref={Popform} onSubmit={handleSubmit}>
               <h1 className="font-bold text-2xl md:text-3xl">Let's Connect</h1>
 
               <div className="mt-5">
