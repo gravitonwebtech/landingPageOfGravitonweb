@@ -54,19 +54,19 @@ const faqs = [
     id: 1,
     question: "Q1. How do i sign up for the project?",
     answer:
-      "Partnership Act 1932 is responsible for Partnership Deed Registration in India.",
+      "Visit the project website, click on Sign Up, complete the form with required details, and submit your registration information.",
   },
   {
     id: 2,
     question: "Q2. What thing that i should prepare before starting?",
     answer:
-      "Form No. 1 is required to get registered under the Partnership Act.",
+      "Outline goals, gather resources, plan, set milestones, form a team, and assign roles for project initiation.",
   },
   {
     id: 3,
     question: "Q3. Does my company need help for marketing advices?",
     answer:
-      "In India, there are two types of partnerships: Partnership at Will and Particular Partnership.",
+      "Consider professional marketing advice to enhance your company's strategies, reach broader audiences, and drive growth.",
   },
 ];
 
@@ -1073,7 +1073,7 @@ function Home2() {
         </h1>
       </div>
 
-      <div className="mx-5 md:mx-20 lg:mx-32 xl:mx-48 mt-10">
+      <div className="mx-5 md:mx-20 lg:mx-32 xl:mx-48 mt-5 md:mt-10">
         <Slider {...WebtechSlideSettings1}>
           <div className="p-4">
             <div className="bg-[#3461FF] p-4 rounded-2xl">
