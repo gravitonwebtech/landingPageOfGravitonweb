@@ -109,7 +109,7 @@ function Home2() {
   };
 
   // emailjs
-  const form = useRef();
+  const formRef = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -117,7 +117,7 @@ function Home2() {
       .sendForm(
         "service_fou94i9",
         "template_cido1v7",
-        form.current,
+         formRef.current,
         "jwkvXtuG3BVhmwYVq"
       )
       .then(
@@ -126,6 +126,65 @@ function Home2() {
 
           // Reset form fields after successful email submission
           setFormData({
+            name: "",
+            phoneNumber: "",
+            cityType: "",
+            email: "",
+            message: "",
+          });
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
+  const [formData1, setFormData1] = useState({
+    name: "",
+    phoneNumber: "",
+    cityType: "",
+    email: "",
+    message: "",
+  });
+  const handleInputChange1 = (e) => {
+    const { name, value } = e.target;
+    setFormData1((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+  const handleSubmit1 = (e) => {
+    e.preventDefault();
+    console.log("Submitted data:", formData1);
+
+    // Reset form fields after submission
+    setFormData1({
+      name: "",
+      phoneNumber: "",
+      cityType: "",
+      email: "",
+      message: "",
+    });
+  };
+
+  // emailjs
+  const form1Ref = useRef();
+  const sendEmail1 = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_fou94i9",
+        "template_cido1v7",
+        form1Ref.current,
+        "jwkvXtuG3BVhmwYVq"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+
+          // Reset form fields after successful email submission
+          setFormData1({
             name: "",
             phoneNumber: "",
             cityType: "",
@@ -266,7 +325,7 @@ function Home2() {
                 you.
               </p>
 
-              <form ref={form} onSubmit={sendEmail}>
+              <form ref={formRef} onSubmit={sendEmail}>
                 <div className="mb-4">
                   <label
                     className="block text-gray-700 text-md font-semibold"
@@ -1818,7 +1877,7 @@ function Home2() {
               Kindly Fill your credential to start course counselling with you.
             </p>
 
-            <form ref={form} onSubmit={sendEmail}>
+            <form ref={form1Ref} onSubmit={sendEmail1}>
               <div className="mb-4">
                 <label
                   className="block text-gray-700 text-md font-semibold"
@@ -1830,8 +1889,8 @@ function Home2() {
                   id="name"
                   name="name"
                   type="text"
-                  value={formData.name}
-                  onChange={handleInputChange}
+                  value={formData1.name}
+                  onChange={handleInputChange1}
                   className="border-b-2 border-gray-500 focus:outline-none focus:border-blue-500 w-full"
                   required
                 />
@@ -1848,8 +1907,8 @@ function Home2() {
                   id="phoneNumber"
                   name="phoneNumber"
                   type="text"
-                  value={formData.phoneNumber}
-                  onChange={handleInputChange}
+                  value={formData1.phoneNumber}
+                  onChange={handleInputChange1}
                   className="border-b-2 border-gray-500 focus:outline-none focus:border-blue-500 w-full"
                   required
                 />
@@ -1862,8 +1921,8 @@ function Home2() {
                   className="w-3 h-3 inline-block align-middle"
                   name="cityType"
                   value="I am a College Student"
-                  checked={formData.cityType === "I am a College Student"}
-                  onChange={handleInputChange}
+                  checked={formData1.cityType === "I am a College Student"}
+                  onChange={handleInputChange1}
                 />
                 <label
                   htmlFor="metro"
@@ -1880,8 +1939,8 @@ function Home2() {
                   className="h-3 w-3 inline-block align-middle"
                   name="cityType"
                   value=" I’m a Company Employee"
-                  checked={formData.cityType === " I’m a Company Employee"}
-                  onChange={handleInputChange}
+                  checked={formData1.cityType === " I’m a Company Employee"}
+                  onChange={handleInputChange1}
                 />
                 <label
                   htmlFor="oth"
@@ -1902,8 +1961,8 @@ function Home2() {
                   id="email"
                   name="email"
                   type="email"
-                  value={formData.email}
-                  onChange={handleInputChange}
+                  value={formData1.email}
+                  onChange={handleInputChange1}
                   className="border-b-2 border-gray-500 focus:outline-none focus:border-blue-500 w-full"
                   required
                 />
@@ -1920,8 +1979,8 @@ function Home2() {
                   id="message"
                   name="message"
                   rows="1"
-                  value={formData.message}
-                  onChange={handleInputChange}
+                  value={formData1.message}
+                  onChange={handleInputChange1}
                   className="border-b-2 border-gray-500 focus:outline-none focus:border-blue-500 w-full"
                 />
               </div>
