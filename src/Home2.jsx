@@ -8,6 +8,15 @@ import slide2 from "./images/slide8.png";
 import slide3 from "./images/slide9.png";
 import slide4 from "./images/slide5.png";
 import slide5 from "./images/slide10.png";
+import Wipro from "./images/wiproImg.png";
+import Delloite from "./images/delloiteImg.png";
+import Jio from "./images/jioImg.jpg";
+import PlanetSpark from "./images/panetsparkImg.jfif";
+import Tcs from "./images/tcs.png";
+import Hcl from "./images/Hcl.png";
+import Cognizant from "./images/cognizant.png";
+import Capgemini from "./images/Capgemini.png";
+import SliderImg from "./images/sliderImg.svg";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -173,6 +182,23 @@ function Home2() {
 
   if (isSmallScreen1) {
     WebtechSlideSettings1.slidesToShow = 1;
+  }
+
+  const WebtechSlideSettings2 = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 1000,
+  };
+
+  const isSmallScreen2 = window.innerWidth <= 768;
+
+  if (isSmallScreen2) {
+    WebtechSlideSettings2.slidesToShow = 1;
   }
 
   const [openId, setOpenId] = useState(null);
@@ -627,7 +653,7 @@ function Home2() {
                 } hover:text-blue-500`}
                 onClick={() => setActiveTab(3)}
               >
-               Live Projects
+                Live Projects
               </div>
 
               <div
@@ -679,13 +705,15 @@ function Home2() {
 
               {activeTab === 1 && (
                 <div className="border-2 border-gray-200 p-5 rounded-xl">
-                   <h1 className="text-xl font-bold">FULLSTACK DEVELOPMENT</h1>
-                   <ul className="ml-5 mt-4">
+                  <h1 className="text-xl font-bold">FULLSTACK DEVELOPMENT</h1>
+                  <ul className="ml-5 mt-4">
                     <li className="font-medium">HTML, CSS, JavaScript</li>
                     <li className="font-medium">React, Redux</li>
                     <li className="font-medium">TailwindCss, Bootstrap</li>
                     <li className="font-medium">React Toolkit</li>
-                    <li className="font-medium">Django, Angular, NodeJs ,ExpressJs</li>
+                    <li className="font-medium">
+                      Django, Angular, NodeJs ,ExpressJs
+                    </li>
                     <li className="font-medium">Git & GitHub</li>
                   </ul>
                 </div>
@@ -752,7 +780,6 @@ function Home2() {
                   </ul>
                 </div>
               )}
-
             </div>
           </div>
         </div>
@@ -812,14 +839,16 @@ function Home2() {
 
       {/* placed section */}
       <div className="mt-10 md:mt-20 mx-10 md:mx-20 lg:mx-28">
-        <h1 className=" font-bold  text-2xl md:text-4xl lg:text-5xl ">
-          RECENTLY PLACED
-          <br /> STUDENTS
-          <p className="border-t-8 border-[#262566] w-[50%]  md:w-[20%]  my-3 "></p>
+        <h1
+          className=" font-bold  text-2xl md:text-4xl text-center"
+          style={{ fontFamily: "Poppins" }}
+        >
+          Our Recently Placed Students
+          {/* <p className="border-t-8 border-[#262566] w-[50%]  md:w-[20%]  my-3 "></p> */}
         </h1>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 mx-10 md:mx-20 lg:mx-28  mt-10 md:mt-16">
+      {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 mx-10 md:mx-20 lg:mx-28  mt-10 md:mt-16">
         <div>
           <div className="flex justify-center">
             <img src={prateek} />
@@ -972,6 +1001,716 @@ function Home2() {
             <i className="text-xl font-semibold">Placed in Wipro</i>
           </div>
         </div>
+      </div> */}
+
+      <div className="mx-5 md:mx-20 lg:mx-40 xl:mx-64 mt-5 md:mt-10 hidden md:block">
+        <Slider {...WebtechSlideSettings2}>
+          <div className="p-4">
+            <div className="rounded-2xl border-4 border-[#00D3FF] px-10">
+              <div className="grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-10 xl:gap-20">
+                <div className="md:col-span-3 pt-10">
+                  <img src={prateek} className="rounded-[4px]" />
+                </div>
+
+                <div className="md:col-span-6 pt-10 ">
+                  <h1
+                    className="text-black font-semibold text-xl md:text-3xl lg:text-4xl xl:text-5xl"
+                    style={{ fontFamily: "Poppins" }}
+                  >
+                    Prateek Mehta
+                  </h1>
+                  <i className="text-2xl lg:text-3xl xl:text-4xl font-semibold text-[#525252] mt-5">
+                    IT Manager
+                  </i>
+                  <p
+                    className="text-[#00D3FF] font-bold text-xl md:text-2xl mt-4"
+                    style={{ fontFamily: "Poppins" }}
+                  >
+                    Placed In
+                  </p>
+                  <img src={Wipro} alt="" className="w-[100px] h-auto" />
+                </div>
+
+                <div className="md:col-span-3 hidden md:block">
+                  <div className=" flex justify-end">
+                    <img
+                      src={SliderImg}
+                      alt=""
+                      className=" h-auto md:h-[300px]"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="p-4">
+            <div className="rounded-2xl border-4 border-[#00D3FF] px-10">
+              <div className="grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-10 xl:gap-20">
+                <div className="md:col-span-3 pt-10">
+                  <img src={Mansi} className="rounded-[4px]" />
+                </div>
+
+                <div className="md:col-span-6 pt-10 ">
+                  <h1
+                    className="text-black font-semibold text-xl md:text-3xl lg:text-4xl xl:text-5xl"
+                    style={{ fontFamily: "Poppins" }}
+                  >
+                    Mansi Singh
+                  </h1>
+                  <i className="text-2xl lg:text-3xl xl:text-4xl font-semibold text-[#525252] mt-5">
+                    UI/UX Designer
+                  </i>
+                  <p
+                    className="text-[#00D3FF] font-bold text-xl md:text-2xl mt-4"
+                    style={{ fontFamily: "Poppins" }}
+                  >
+                    Placed In
+                  </p>
+                  <img src={Delloite} alt="" className="w-[100px] h-auto" />
+                </div>
+
+                <div className="md:col-span-3 hidden md:block">
+                  <div className=" flex justify-end">
+                    <img
+                      src={SliderImg}
+                      alt=""
+                      className=" h-auto md:h-[300px]"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="p-4">
+            <div className="rounded-2xl border-4 border-[#00D3FF] px-10">
+              <div className="grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-10 xl:gap-20">
+                <div className="md:col-span-3 pt-10">
+                  <img src={nilanshi} className="rounded-[4px]" />
+                </div>
+
+                <div className="md:col-span-6 pt-10 ">
+                  <h1
+                    className="text-black font-semibold text-xl md:text-3xl lg:text-4xl xl:text-5xl"
+                    style={{ fontFamily: "Poppins" }}
+                  >
+                    Nilanshi
+                  </h1>
+                  <i className="text-2xl lg:text-3xl xl:text-4xl font-semibold text-[#525252] mt-5">
+                    Software Engineer
+                  </i>
+                  <p
+                    className="text-[#00D3FF] font-bold text-xl md:text-2xl mt-4"
+                    style={{ fontFamily: "Poppins" }}
+                  >
+                    Placed In
+                  </p>
+                  <img src={Jio} alt="" className="w-[100px] h-auto" />
+                </div>
+
+                <div className="md:col-span-3 hidden md:block">
+                  <div className=" flex justify-end">
+                    <img
+                      src={SliderImg}
+                      alt=""
+                      className=" h-auto md:h-[300px]"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="p-4">
+            <div className="rounded-2xl border-4 border-[#00D3FF] px-10">
+              <div className="grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-10 xl:gap-20">
+                <div className="md:col-span-3 pt-10">
+                  <img src={avdhesh} className="rounded-[4px]" />
+                </div>
+
+                <div className="md:col-span-6 pt-10 ">
+                  <h1
+                    className="text-black font-semibold text-xl md:text-3xl lg:text-4xl xl:text-5xl"
+                    style={{ fontFamily: "Poppins" }}
+                  >
+                    Avdhesh Singh
+                  </h1>
+                  <i className="text-2xl lg:text-3xl xl:text-4xl font-semibold text-[#525252] mt-5">
+                    Frontend Developer
+                  </i>
+                  <p
+                    className="text-[#00D3FF] font-bold text-xl md:text-2xl mt-4"
+                    style={{ fontFamily: "Poppins" }}
+                  >
+                    Placed In
+                  </p>
+                  <img src={PlanetSpark} alt="" className="w-[100px] h-auto" />
+                </div>
+
+                <div className="md:col-span-3 hidden md:block">
+                  <div className=" flex justify-end">
+                    <img
+                      src={SliderImg}
+                      alt=""
+                      className=" h-auto md:h-[300px]"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="p-4">
+            <div className="rounded-2xl border-4 border-[#00D3FF] px-10">
+              <div className="grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-10 xl:gap-20">
+                <div className="md:col-span-3 pt-10">
+                  <img src={rishbh} className="rounded-[4px]" />
+                </div>
+
+                <div className="md:col-span-6 pt-10 ">
+                  <h1
+                    className="text-black font-semibold text-xl md:text-3xl lg:text-4xl xl:text-5xl"
+                    style={{ fontFamily: "Poppins" }}
+                  >
+                    Rishabh Kumar
+                  </h1>
+                  <i className="text-2xl lg:text-3xl xl:text-4xl font-semibold text-[#525252] mt-5">
+                    Software Engineer
+                  </i>
+                  <p
+                    className="text-[#00D3FF] font-bold text-xl md:text-2xl mt-4"
+                    style={{ fontFamily: "Poppins" }}
+                  >
+                    Placed In
+                  </p>
+                  <img src={Hcl} alt="" className="w-[100px] h-auto" />
+                </div>
+
+                <div className="md:col-span-3 hidden md:block">
+                  <div className=" flex justify-end">
+                    <img
+                      src={SliderImg}
+                      alt=""
+                      className=" h-auto md:h-[300px]"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="p-4">
+            <div className="rounded-2xl border-4 border-[#00D3FF] px-10">
+              <div className="grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-10 xl:gap-20">
+                <div className="md:col-span-3 pt-10">
+                  <img src={ashish} className="rounded-[4px]" />
+                </div>
+
+                <div className="md:col-span-6 pt-10 ">
+                  <h1
+                    className="text-black font-semibold text-xl md:text-3xl lg:text-4xl xl:text-5xl"
+                    style={{ fontFamily: "Poppins" }}
+                  >
+                    Ashish Singh
+                  </h1>
+                  <i className="text-2xl lg:text-3xl xl:text-4xl font-semibold text-[#525252] mt-5">
+                    Android Developer
+                  </i>
+                  <p
+                    className="text-[#00D3FF] font-bold text-xl md:text-2xl mt-4"
+                    style={{ fontFamily: "Poppins" }}
+                  >
+                    Placed In
+                  </p>
+                  <img src={Capgemini} alt="" className="w-[100px] h-auto" />
+                </div>
+
+                <div className="md:col-span-3 hidden md:block">
+                  <div className=" flex justify-end">
+                    <img
+                      src={SliderImg}
+                      alt=""
+                      className=" h-auto md:h-[300px]"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="p-4">
+            <div className="rounded-2xl border-4 border-[#00D3FF] px-10">
+              <div className="grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-10 xl:gap-20">
+                <div className="md:col-span-3 pt-10">
+                  <img src={amiya} className="rounded-[4px]" />
+                </div>
+
+                <div className="md:col-span-6 pt-10 ">
+                  <h1
+                    className="text-black font-semibold text-xl md:text-3xl lg:text-4xl xl:text-5xl"
+                    style={{ fontFamily: "Poppins" }}
+                  >
+                    Amiya Mishra
+                  </h1>
+                  <i className="text-2xl lg:text-3xl xl:text-4xl font-semibold text-[#525252] mt-5">
+                    Software Engineer
+                  </i>
+                  <p
+                    className="text-[#00D3FF] font-bold text-xl md:text-2xl mt-4"
+                    style={{ fontFamily: "Poppins" }}
+                  >
+                    Placed In
+                  </p>
+                  <img src={Cognizant} alt="" className="w-[100px] h-auto" />
+                </div>
+
+                <div className="md:col-span-3 hidden md:block">
+                  <div className=" flex justify-end">
+                    <img
+                      src={SliderImg}
+                      alt=""
+                      className=" h-auto md:h-[300px]"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="p-4">
+            <div className="rounded-2xl border-4 border-[#00D3FF] px-10">
+              <div className="grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-10 xl:gap-20">
+                <div className="md:col-span-3 pt-10">
+                  <img src={manan} className="rounded-[4px]" />
+                </div>
+
+                <div className="md:col-span-6 pt-10 ">
+                  <h1
+                    className="text-black font-semibold text-xl md:text-3xl lg:text-4xl xl:text-5xl"
+                    style={{ fontFamily: "Poppins" }}
+                  >
+                    Manan Sharma
+                  </h1>
+                  <i className="text-2xl lg:text-3xl xl:text-4xl font-semibold text-[#525252] mt-5">
+                    Web Designer
+                  </i>
+                  <p
+                    className="text-[#00D3FF] font-bold text-xl md:text-2xl mt-4"
+                    style={{ fontFamily: "Poppins" }}
+                  >
+                    Placed In
+                  </p>
+                  <img src={Tcs} alt="" className="w-[100px] h-auto" />
+                </div>
+
+                <div className="md:col-span-3 hidden md:block">
+                  <div className=" flex justify-end">
+                    <img
+                      src={SliderImg}
+                      alt=""
+                      className=" h-auto md:h-[300px]"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="p-4">
+            <div className="rounded-2xl border-4 border-[#00D3FF] px-10">
+              <div className="grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-10 xl:gap-20">
+                <div className="md:col-span-3 pt-10">
+                  <img src={mithali} className="rounded-[4px]" />
+                </div>
+
+                <div className="md:col-span-6 pt-10 ">
+                  <h1
+                    className="text-black font-semibold text-xl md:text-3xl lg:text-4xl xl:text-5xl"
+                    style={{ fontFamily: "Poppins" }}
+                  >
+                    Mithali Raj
+                  </h1>
+                  <i className="text-2xl lg:text-3xl xl:text-4xl font-semibold text-[#525252] mt-5">
+                    FullStack Developer
+                  </i>
+                  <p
+                    className="text-[#00D3FF] font-bold text-xl md:text-2xl mt-4"
+                    style={{ fontFamily: "Poppins" }}
+                  >
+                    Placed In
+                  </p>
+                  <img src={Wipro} alt="" className="w-[100px] h-auto" />
+                </div>
+
+                <div className="md:col-span-3 hidden md:block">
+                  <div className=" flex justify-end">
+                    <img
+                      src={SliderImg}
+                      alt=""
+                      className=" h-auto md:h-[300px]"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Slider>
+      </div>
+
+      <div className="mx-5 md:mx-20 lg:mx-40 xl:mx-64 mt-5 md:mt-10 block md:hidden">
+        <Slider {...WebtechSlideSettings2}>
+          <div className="p-4">
+            <div className="rounded-2xl border-4 border-[#00D3FF] px-10">
+              <div className="grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-10 xl:gap-20">
+                <div className="md:col-span-3 pt-10 flex justify-center">
+                  <img src={prateek} className="rounded-[4px]" />
+                </div>
+
+                <div className="md:col-span-6 pt-10 flex flex-col items-center justify-center">
+                  <h1
+                    className="text-black font-semibold text-xl md:text-3xl lg:text-4xl xl:text-5xl"
+                    style={{ fontFamily: "Poppins" }}
+                  >
+                    Prateek Mehta
+                  </h1>
+                  <i className="text-2xl lg:text-3xl xl:text-4xl font-semibold text-[#525252] mt-5">
+                    IT Manager
+                  </i>
+                  <p
+                    className="text-[#00D3FF] font-bold text-xl md:text-2xl mt-4"
+                    style={{ fontFamily: "Poppins" }}
+                  >
+                    Placed In
+                  </p>
+                  <img src={Wipro} alt="" className="w-[100px] h-auto mt-2" />
+                </div>
+
+                <div className="md:col-span-3 hidden md:block">
+                  <div className=" flex justify-end">
+                    <img
+                      src={SliderImg}
+                      alt=""
+                      className=" h-auto md:h-[300px]"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="p-4">
+            <div className="rounded-2xl border-4 border-[#00D3FF] px-10">
+              <div className="grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-10 xl:gap-20">
+                <div className="md:col-span-3 pt-10 flex justify-center">
+                  <img src={Mansi} className="rounded-[4px]" />
+                </div>
+
+                <div className="md:col-span-6 pt-10  flex flex-col items-center justify-center">
+                  <h1
+                    className="text-black font-semibold text-xl md:text-3xl lg:text-4xl xl:text-5xl"
+                    style={{ fontFamily: "Poppins" }}
+                  >
+                    Mansi Singh
+                  </h1>
+                  <i className="text-2xl lg:text-3xl xl:text-4xl font-semibold text-[#525252] mt-5">
+                    UI/UX Designer
+                  </i>
+                  <p
+                    className="text-[#00D3FF] font-bold text-xl md:text-2xl mt-4"
+                    style={{ fontFamily: "Poppins" }}
+                  >
+                    Placed In
+                  </p>
+                  <img src={Delloite} alt="" className="w-[100px] h-auto" />
+                </div>
+
+                <div className="md:col-span-3 hidden md:block">
+                  <div className=" flex justify-end">
+                    <img
+                      src={SliderImg}
+                      alt=""
+                      className=" h-auto md:h-[300px]"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="p-4">
+            <div className="rounded-2xl border-4 border-[#00D3FF] px-10">
+              <div className="grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-10 xl:gap-20">
+                <div className="md:col-span-3 pt-10 flex justify-center">
+                  <img src={nilanshi} className="rounded-[4px]" />
+                </div>
+
+                <div className="md:col-span-6 pt-10  flex flex-col items-center justify-center">
+                  <h1
+                    className="text-black font-semibold text-xl md:text-3xl lg:text-4xl xl:text-5xl"
+                    style={{ fontFamily: "Poppins" }}
+                  >
+                    Nilanshi
+                  </h1>
+                  <i className="text-2xl lg:text-3xl xl:text-4xl font-semibold text-[#525252] mt-5">
+                    Software Engineer
+                  </i>
+                  <p
+                    className="text-[#00D3FF] font-bold text-xl md:text-2xl mt-4"
+                    style={{ fontFamily: "Poppins" }}
+                  >
+                    Placed In
+                  </p>
+                  <img src={Jio} alt="" className="w-[100px] h-auto" />
+                </div>
+
+                <div className="md:col-span-3 hidden md:block">
+                  <div className=" flex justify-end">
+                    <img
+                      src={SliderImg}
+                      alt=""
+                      className=" h-auto md:h-[300px]"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="p-4">
+            <div className="rounded-2xl border-4 border-[#00D3FF] px-10">
+              <div className="grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-10 xl:gap-20">
+                <div className="md:col-span-3 pt-10 flex justify-center">
+                  <img src={avdhesh} className="rounded-[4px]" />
+                </div>
+
+                <div className="md:col-span-6 pt-10  flex flex-col items-center justify-center">
+                  <h1
+                    className="text-black font-semibold text-xl md:text-3xl lg:text-4xl xl:text-5xl"
+                    style={{ fontFamily: "Poppins" }}
+                  >
+                    Avdhesh Singh
+                  </h1>
+                  <i className="text-2xl lg:text-3xl xl:text-4xl font-semibold text-[#525252] mt-5">
+                    Frontend Developer
+                  </i>
+                  <p
+                    className="text-[#00D3FF] font-bold text-xl md:text-2xl mt-4"
+                    style={{ fontFamily: "Poppins" }}
+                  >
+                    Placed In
+                  </p>
+                  <img src={PlanetSpark} alt="" className="w-[100px] h-auto" />
+                </div>
+
+                <div className="md:col-span-3 hidden md:block">
+                  <div className=" flex justify-end">
+                    <img
+                      src={SliderImg}
+                      alt=""
+                      className=" h-auto md:h-[300px]"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="p-4">
+            <div className="rounded-2xl border-4 border-[#00D3FF] px-10">
+              <div className="grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-10 xl:gap-20">
+                <div className="md:col-span-3 pt-10 flex justify-center">
+                  <img src={rishbh} className="rounded-[4px]" />
+                </div>
+
+                <div className="md:col-span-6 pt-10  flex flex-col items-center justify-center">
+                  <h1
+                    className="text-black font-semibold text-xl md:text-3xl lg:text-4xl xl:text-5xl"
+                    style={{ fontFamily: "Poppins" }}
+                  >
+                    Rishabh Kumar
+                  </h1>
+                  <i className="text-2xl lg:text-3xl xl:text-4xl font-semibold text-[#525252] mt-5">
+                    Software Engineer
+                  </i>
+                  <p
+                    className="text-[#00D3FF] font-bold text-xl md:text-2xl mt-4"
+                    style={{ fontFamily: "Poppins" }}
+                  >
+                    Placed In
+                  </p>
+                  <img src={Hcl} alt="" className="w-[100px] h-auto" />
+                </div>
+
+                <div className="md:col-span-3 hidden md:block">
+                  <div className=" flex justify-end">
+                    <img
+                      src={SliderImg}
+                      alt=""
+                      className=" h-auto md:h-[300px]"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="p-4">
+            <div className="rounded-2xl border-4 border-[#00D3FF] px-10">
+              <div className="grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-10 xl:gap-20">
+                <div className="md:col-span-3 pt-10 flex justify-center">
+                  <img src={ashish} className="rounded-[4px]" />
+                </div>
+
+                <div className="md:col-span-6 pt-10  flex flex-col items-center justify-center ">
+                  <h1
+                    className="text-black font-semibold text-xl md:text-3xl lg:text-4xl xl:text-5xl"
+                    style={{ fontFamily: "Poppins" }}
+                  >
+                    Ashish Singh
+                  </h1>
+                  <i className="text-2xl lg:text-3xl xl:text-4xl font-semibold text-[#525252] mt-5">
+                    Android Developer
+                  </i>
+                  <p
+                    className="text-[#00D3FF] font-bold text-xl md:text-2xl mt-4"
+                    style={{ fontFamily: "Poppins" }}
+                  >
+                    Placed In
+                  </p>
+                  <img src={Capgemini} alt="" className="w-[100px] h-auto" />
+                </div>
+
+                <div className="md:col-span-3 hidden md:block">
+                  <div className=" flex justify-end">
+                    <img
+                      src={SliderImg}
+                      alt=""
+                      className=" h-auto md:h-[300px]"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="p-4">
+            <div className="rounded-2xl border-4 border-[#00D3FF] px-10">
+              <div className="grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-10 xl:gap-20">
+                <div className="md:col-span-3 pt-10 flex justify-center">
+                  <img src={amiya} className="rounded-[4px]" />
+                </div>
+
+                <div className="md:col-span-6 pt-10  flex flex-col items-center justify-center">
+                  <h1
+                    className="text-black font-semibold text-xl md:text-3xl lg:text-4xl xl:text-5xl"
+                    style={{ fontFamily: "Poppins" }}
+                  >
+                    Amiya Mishra
+                  </h1>
+                  <i className="text-2xl lg:text-3xl xl:text-4xl font-semibold text-[#525252] mt-5">
+                    Software Engineer
+                  </i>
+                  <p
+                    className="text-[#00D3FF] font-bold text-xl md:text-2xl mt-4"
+                    style={{ fontFamily: "Poppins" }}
+                  >
+                    Placed In
+                  </p>
+                  <img src={Cognizant} alt="" className="w-[100px] h-auto" />
+                </div>
+
+                <div className="md:col-span-3 hidden md:block">
+                  <div className=" flex justify-end">
+                    <img
+                      src={SliderImg}
+                      alt=""
+                      className=" h-auto md:h-[300px]"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="p-4">
+            <div className="rounded-2xl border-4 border-[#00D3FF] px-10">
+              <div className="grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-10 xl:gap-20">
+                <div className="md:col-span-3 pt-10 flex justify-center">
+                  <img src={manan} className="rounded-[4px]" />
+                </div>
+
+                <div className="md:col-span-6 pt-10  flex flex-col items-center justify-center ">
+                  <h1
+                    className="text-black font-semibold text-xl md:text-3xl lg:text-4xl xl:text-5xl"
+                    style={{ fontFamily: "Poppins" }}
+                  >
+                    Manan Sharma
+                  </h1>
+                  <i className="text-2xl lg:text-3xl xl:text-4xl font-semibold text-[#525252] mt-5">
+                    Web Designer
+                  </i>
+                  <p
+                    className="text-[#00D3FF] font-bold text-xl md:text-2xl mt-4"
+                    style={{ fontFamily: "Poppins" }}
+                  >
+                    Placed In
+                  </p>
+                  <img src={Tcs} alt="" className="w-[100px] h-auto" />
+                </div>
+
+                <div className="md:col-span-3 hidden md:block">
+                  <div className=" flex justify-end">
+                    <img
+                      src={SliderImg}
+                      alt=""
+                      className=" h-auto md:h-[300px]"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="p-4">
+            <div className="rounded-2xl border-4 border-[#00D3FF] px-10">
+              <div className="grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-10 xl:gap-20">
+                <div className="md:col-span-3 pt-10 flex justify-center">
+                  <img src={mithali} className="rounded-[4px]" />
+                </div>
+
+                <div className="md:col-span-6 pt-10  flex flex-col items-center justify-center">
+                  <h1
+                    className="text-black font-semibold text-xl md:text-3xl lg:text-4xl xl:text-5xl"
+                    style={{ fontFamily: "Poppins" }}
+                  >
+                    Mithali Raj
+                  </h1>
+                  <i className="text-2xl lg:text-3xl xl:text-4xl font-semibold text-[#525252] mt-5">
+                    FullStack Developer
+                  </i>
+                  <p
+                    className="text-[#00D3FF] font-bold text-xl md:text-2xl mt-4"
+                    style={{ fontFamily: "Poppins" }}
+                  >
+                    Placed In
+                  </p>
+                  <img src={Wipro} alt="" className="w-[100px] h-auto" />
+                </div>
+
+                <div className="md:col-span-3 hidden md:block">
+                  <div className=" flex justify-end">
+                    <img
+                      src={SliderImg}
+                      alt=""
+                      className=" h-auto md:h-[300px]"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Slider>
       </div>
 
       {/* join-section */}
@@ -1044,8 +1783,8 @@ function Home2() {
 
       {/* elevator */}
 
-      <div className="elevator-image mx-5 md:mx-20 lg:mx-32 xl:mx-48 mt-10 p-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+      <div className="elevator-image mx-5 md:mx-20 lg:mx-32 xl:mx-48 mt-14 p-10 mt-5">
+        {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           <div>
             <h1 className="text-white">Elevate your Career Today!</h1>
           </div>
@@ -1061,6 +1800,141 @@ function Home2() {
             >
               SignUp
             </button>
+          </div>
+        </div> */}
+        <div className="">
+          <h1 className="text-white text-center">Elevate your Career Today!</h1>
+          <p className="text-white text-center mt-2">
+            Fillup form to start your journey with us
+          </p>
+
+          <div className="bg-white shadow-2xl p-5 rounded-[4px] mx-auto max-w-md">
+            <h1 className="text-black text-xl text-center font-semibold">
+              Get ready to Elevate Your
+              <br />
+              Career to its Peak
+            </h1>
+            <p className="text-[#767676] text-md mt-3">
+              Kindly Fill your credential to start course counselling with you.
+            </p>
+
+            <form ref={form} onSubmit={sendEmail}>
+              <div className="mb-4">
+                <label
+                  className="block text-gray-700 text-md font-semibold"
+                  htmlFor="name"
+                >
+                  Name
+                </label>
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  value={formData.name}
+                  onChange={handleInputChange}
+                  className="border-b-2 border-gray-500 focus:outline-none focus:border-blue-500 w-full"
+                  required
+                />
+              </div>
+
+              <div className="mb-4">
+                <label
+                  className="block text-gray-700 text-md font-semibold"
+                  htmlFor="phoneNumber"
+                >
+                  Phone Number
+                </label>
+                <input
+                  id="phoneNumber"
+                  name="phoneNumber"
+                  type="text"
+                  value={formData.phoneNumber}
+                  onChange={handleInputChange}
+                  className="border-b-2 border-gray-500 focus:outline-none focus:border-blue-500 w-full"
+                  required
+                />
+              </div>
+
+              <div className="mt-3">
+                <input
+                  type="radio"
+                  id="metro"
+                  className="w-3 h-3 inline-block align-middle"
+                  name="cityType"
+                  value="I am a College Student"
+                  checked={formData.cityType === "I am a College Student"}
+                  onChange={handleInputChange}
+                />
+                <label
+                  htmlFor="metro"
+                  className="font-semibold inline-block align-middle ml-2"
+                >
+                  I am a College Student
+                </label>
+              </div>
+
+              <div>
+                <input
+                  type="radio"
+                  id="oth"
+                  className="h-3 w-3 inline-block align-middle"
+                  name="cityType"
+                  value=" I’m a Company Employee"
+                  checked={formData.cityType === " I’m a Company Employee"}
+                  onChange={handleInputChange}
+                />
+                <label
+                  htmlFor="oth"
+                  className="font-semibold inline-block align-middle ml-2"
+                >
+                  I’m a Company Employee
+                </label>
+              </div>
+
+              <div className="mb-4 mt-3">
+                <label
+                  className="block text-gray-700 text-md font-semibold"
+                  htmlFor="email"
+                >
+                  Email
+                </label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  className="border-b-2 border-gray-500 focus:outline-none focus:border-blue-500 w-full"
+                  required
+                />
+              </div>
+
+              <div className="mb-4 mt-3">
+                <label
+                  className="block text-gray-700 text-sm font-bold"
+                  htmlFor="message"
+                >
+                  Message (Optional)
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="1"
+                  value={formData.message}
+                  onChange={handleInputChange}
+                  className="border-b-2 border-gray-500 focus:outline-none focus:border-blue-500 w-full"
+                />
+              </div>
+
+              <div className="flex justify-center mt-3">
+                <button
+                  type="submit"
+                  className="bg-[#00D3FF] text-white rounded-[70px] px-5 py-2"
+                >
+                  Let's Talk
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
