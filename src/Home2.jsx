@@ -1420,29 +1420,29 @@ function Home2() {
       <div className="mx-5 md:mx-20 lg:mx-40 xl:mx-64 mt-5 md:mt-10 block md:hidden">
         <Slider {...WebtechSlideSettings2}>
           <div className="p-4">
-            <div className="rounded-2xl border-4 border-[#00D3FF] px-10">
-              <div className="grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-10 xl:gap-20">
-                <div className="md:col-span-3 pt-10 flex justify-center">
-                  <img src={prateek} className="rounded-[4px]" />
+            <div className="rounded-2xl border-4 border-[#00D3FF] px-5 pb-3">
+              <div className="grid grid-cols-1 gap-5 ">
+                <div className="md:col-span-3 pt-5 flex justify-center">
+                  <img src={prateek} className="rounded-[4px] w-[130px] h-auto" />
                 </div>
 
-                <div className="md:col-span-6 pt-10 flex flex-col items-center justify-center">
+                <div className="md:col-span-6 flex flex-col items-center justify-center">
                   <h1
                     className="text-black font-semibold text-xl md:text-3xl lg:text-4xl xl:text-5xl"
                     style={{ fontFamily: "Poppins" }}
                   >
                     Prateek Mehta
                   </h1>
-                  <i className="text-2xl lg:text-3xl xl:text-4xl font-semibold text-[#525252] mt-5">
+                  <i className="text-2xl lg:text-3xl xl:text-4xl font-semibold text-[#525252] mt-2">
                     IT Manager
                   </i>
                   <p
-                    className="text-[#00D3FF] font-bold text-xl md:text-2xl mt-4"
+                    className="text-[#00D3FF] font-bold text-xl md:text-2xl mt-2"
                     style={{ fontFamily: "Poppins" }}
                   >
                     Placed In
                   </p>
-                  <img src={Wipro} alt="" className="w-[100px] h-auto mt-2" />
+                  <img src={Wipro} alt="" className="w-[100px] h-auto" />
                 </div>
 
                 <div className="md:col-span-3 hidden md:block">
@@ -1459,24 +1459,24 @@ function Home2() {
           </div>
 
           <div className="p-4">
-            <div className="rounded-2xl border-4 border-[#00D3FF] px-10">
-              <div className="grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-10 xl:gap-20">
-                <div className="md:col-span-3 pt-10 flex justify-center">
-                  <img src={Mansi} className="rounded-[4px]" />
+            <div className="rounded-2xl border-4 border-[#00D3FF] px-5 pb-3">
+              <div className="grid grid-cols-1 gap-5 ">
+                <div className="md:col-span-3 pt-5 flex justify-center">
+                  <img src={Mansi} className="rounded-[4px] w-[150px] h-auto" />
                 </div>
 
-                <div className="md:col-span-6 pt-10  flex flex-col items-center justify-center">
+                <div className="md:col-span-6 flex flex-col items-center justify-center">
                   <h1
                     className="text-black font-semibold text-xl md:text-3xl lg:text-4xl xl:text-5xl"
                     style={{ fontFamily: "Poppins" }}
                   >
                     Mansi Singh
                   </h1>
-                  <i className="text-2xl lg:text-3xl xl:text-4xl font-semibold text-[#525252] mt-5">
+                  <i className="text-2xl lg:text-3xl xl:text-4xl font-semibold text-[#525252] mt-2">
                     UI/UX Designer
                   </i>
                   <p
-                    className="text-[#00D3FF] font-bold text-xl md:text-2xl mt-4"
+                    className="text-[#00D3FF] font-bold text-xl md:text-2xl mt-2"
                     style={{ fontFamily: "Poppins" }}
                   >
                     Placed In
@@ -1498,24 +1498,24 @@ function Home2() {
           </div>
 
           <div className="p-4">
-            <div className="rounded-2xl border-4 border-[#00D3FF] px-10">
-              <div className="grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-10 xl:gap-20">
-                <div className="md:col-span-3 pt-10 flex justify-center">
-                  <img src={nilanshi} className="rounded-[4px]" />
+            <div className="rounded-2xl border-4 border-[#00D3FF] px-5 pb-3">
+              <div className="grid grid-cols-1 gap-5">
+                <div className="md:col-span-3 pt-5 flex justify-center">
+                  <img src={nilanshi} className="rounded-[4px] w-[140px] h-auto" />
                 </div>
 
-                <div className="md:col-span-6 pt-10  flex flex-col items-center justify-center">
+                <div className="md:col-span-6 flex flex-col items-center justify-center">
                   <h1
                     className="text-black font-semibold text-xl md:text-3xl lg:text-4xl xl:text-5xl"
                     style={{ fontFamily: "Poppins" }}
                   >
                     Nilanshi
                   </h1>
-                  <i className="text-2xl lg:text-3xl xl:text-4xl font-semibold text-[#525252] mt-5">
+                  <i className="text-2xl lg:text-3xl xl:text-4xl font-semibold text-[#525252] mt-2">
                     Software Engineer
                   </i>
                   <p
-                    className="text-[#00D3FF] font-bold text-xl md:text-2xl mt-4"
+                    className="text-[#00D3FF] font-bold text-xl md:text-2xl mt-2"
                     style={{ fontFamily: "Poppins" }}
                   >
                     Placed In
@@ -1537,24 +1537,24 @@ function Home2() {
           </div>
 
           <div className="p-4">
-            <div className="rounded-2xl border-4 border-[#00D3FF] px-10">
-              <div className="grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-10 xl:gap-20">
-                <div className="md:col-span-3 pt-10 flex justify-center">
-                  <img src={avdhesh} className="rounded-[4px]" />
+            <div className="rounded-2xl border-4 border-[#00D3FF] px-5 pb-3">
+              <div className="grid grid-cols-1 gap-5">
+                <div className="md:col-span-3 pt-5 flex justify-center">
+                  <img src={avdhesh} className="rounded-[4px] w-[150px] h-auto" />
                 </div>
 
-                <div className="md:col-span-6 pt-10  flex flex-col items-center justify-center">
+                <div className="md:col-span-6 flex flex-col items-center justify-center">
                   <h1
                     className="text-black font-semibold text-xl md:text-3xl lg:text-4xl xl:text-5xl"
                     style={{ fontFamily: "Poppins" }}
                   >
                     Avdhesh Singh
                   </h1>
-                  <i className="text-2xl lg:text-3xl xl:text-4xl font-semibold text-[#525252] mt-5">
+                  <i className="text-2xl lg:text-3xl xl:text-4xl font-semibold text-[#525252] mt-2">
                     Frontend Developer
                   </i>
                   <p
-                    className="text-[#00D3FF] font-bold text-xl md:text-2xl mt-4"
+                    className="text-[#00D3FF] font-bold text-xl md:text-2xl mt-2"
                     style={{ fontFamily: "Poppins" }}
                   >
                     Placed In
@@ -1576,24 +1576,24 @@ function Home2() {
           </div>
 
           <div className="p-4">
-            <div className="rounded-2xl border-4 border-[#00D3FF] px-10">
-              <div className="grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-10 xl:gap-20">
-                <div className="md:col-span-3 pt-10 flex justify-center">
-                  <img src={rishbh} className="rounded-[4px]" />
+            <div className="rounded-2xl border-4 border-[#00D3FF] px-5 pb-3">
+              <div className="grid grid-cols-1 gap-5">
+                <div className="md:col-span-3 pt-5 flex justify-center">
+                  <img src={rishbh} className="rounded-[4px] w-[120px] h-auto" />
                 </div>
 
-                <div className="md:col-span-6 pt-10  flex flex-col items-center justify-center">
+                <div className="md:col-span-6 flex flex-col items-center justify-center">
                   <h1
                     className="text-black font-semibold text-xl md:text-3xl lg:text-4xl xl:text-5xl"
                     style={{ fontFamily: "Poppins" }}
                   >
                     Rishabh Kumar
                   </h1>
-                  <i className="text-2xl lg:text-3xl xl:text-4xl font-semibold text-[#525252] mt-5">
+                  <i className="text-2xl lg:text-3xl xl:text-4xl font-semibold text-[#525252] mt-2">
                     Software Engineer
                   </i>
                   <p
-                    className="text-[#00D3FF] font-bold text-xl md:text-2xl mt-4"
+                    className="text-[#00D3FF] font-bold text-xl md:text-2xl mt-2"
                     style={{ fontFamily: "Poppins" }}
                   >
                     Placed In
@@ -1615,24 +1615,24 @@ function Home2() {
           </div>
 
           <div className="p-4">
-            <div className="rounded-2xl border-4 border-[#00D3FF] px-10">
-              <div className="grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-10 xl:gap-20">
-                <div className="md:col-span-3 pt-10 flex justify-center">
-                  <img src={ashish} className="rounded-[4px]" />
+            <div className="rounded-2xl border-4 border-[#00D3FF] px-5 pb-3">
+              <div className="grid grid-cols-1  gap-5">
+                <div className="md:col-span-3 pt-5 flex justify-center">
+                  <img src={ashish} className="rounded-[4px] w-[150px] h-auto" />
                 </div>
 
-                <div className="md:col-span-6 pt-10  flex flex-col items-center justify-center ">
+                <div className="md:col-span-6 flex flex-col items-center justify-center ">
                   <h1
                     className="text-black font-semibold text-xl md:text-3xl lg:text-4xl xl:text-5xl"
                     style={{ fontFamily: "Poppins" }}
                   >
                     Ashish Singh
                   </h1>
-                  <i className="text-2xl lg:text-3xl xl:text-4xl font-semibold text-[#525252] mt-5">
+                  <i className="text-2xl lg:text-3xl xl:text-4xl font-semibold text-[#525252] mt-2">
                     Android Developer
                   </i>
                   <p
-                    className="text-[#00D3FF] font-bold text-xl md:text-2xl mt-4"
+                    className="text-[#00D3FF] font-bold text-xl md:text-2xl mt-2"
                     style={{ fontFamily: "Poppins" }}
                   >
                     Placed In
@@ -1654,24 +1654,24 @@ function Home2() {
           </div>
 
           <div className="p-4">
-            <div className="rounded-2xl border-4 border-[#00D3FF] px-10">
-              <div className="grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-10 xl:gap-20">
-                <div className="md:col-span-3 pt-10 flex justify-center">
-                  <img src={amiya} className="rounded-[4px]" />
+            <div className="rounded-2xl border-4 border-[#00D3FF] px-5 pb-3">
+              <div className="grid grid-cols-1 gap-5">
+                <div className="md:col-span-3 pt-5 flex justify-center">
+                  <img src={amiya} className="rounded-[4px] w-[150px] h-auto" />
                 </div>
 
-                <div className="md:col-span-6 pt-10  flex flex-col items-center justify-center">
+                <div className="md:col-span-6 flex flex-col items-center justify-center">
                   <h1
                     className="text-black font-semibold text-xl md:text-3xl lg:text-4xl xl:text-5xl"
                     style={{ fontFamily: "Poppins" }}
                   >
                     Amiya Mishra
                   </h1>
-                  <i className="text-2xl lg:text-3xl xl:text-4xl font-semibold text-[#525252] mt-5">
+                  <i className="text-2xl lg:text-3xl xl:text-4xl font-semibold text-[#525252] mt-2">
                     Software Engineer
                   </i>
                   <p
-                    className="text-[#00D3FF] font-bold text-xl md:text-2xl mt-4"
+                    className="text-[#00D3FF] font-bold text-xl md:text-2xl mt-2"
                     style={{ fontFamily: "Poppins" }}
                   >
                     Placed In
@@ -1693,24 +1693,24 @@ function Home2() {
           </div>
 
           <div className="p-4">
-            <div className="rounded-2xl border-4 border-[#00D3FF] px-10">
-              <div className="grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-10 xl:gap-20">
-                <div className="md:col-span-3 pt-10 flex justify-center">
-                  <img src={manan} className="rounded-[4px]" />
+            <div className="rounded-2xl border-4 border-[#00D3FF] px-5 pb-3">
+              <div className="grid grid-cols-1 gap-5">
+                <div className="md:col-span-3 flex justify-center">
+                  <img src={manan} className="rounded-[4px] w-[150px] h-auto" />
                 </div>
 
-                <div className="md:col-span-6 pt-10  flex flex-col items-center justify-center ">
+                <div className="md:col-span-6 flex flex-col items-center justify-center ">
                   <h1
                     className="text-black font-semibold text-xl md:text-3xl lg:text-4xl xl:text-5xl"
                     style={{ fontFamily: "Poppins" }}
                   >
                     Manan Sharma
                   </h1>
-                  <i className="text-2xl lg:text-3xl xl:text-4xl font-semibold text-[#525252] mt-5">
+                  <i className="text-2xl lg:text-3xl xl:text-4xl font-semibold text-[#525252] mt-2">
                     Web Designer
                   </i>
                   <p
-                    className="text-[#00D3FF] font-bold text-xl md:text-2xl mt-4"
+                    className="text-[#00D3FF] font-bold text-xl md:text-2xl mt-2"
                     style={{ fontFamily: "Poppins" }}
                   >
                     Placed In
@@ -1732,24 +1732,24 @@ function Home2() {
           </div>
 
           <div className="p-4">
-            <div className="rounded-2xl border-4 border-[#00D3FF] px-10">
-              <div className="grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-10 xl:gap-20">
-                <div className="md:col-span-3 pt-10 flex justify-center">
-                  <img src={mithali} className="rounded-[4px]" />
+            <div className="rounded-2xl border-4 border-[#00D3FF] px-5 pb-3">
+              <div className="grid grid-cols-1 gap-5">
+                <div className="md:col-span-3 pt-5 flex justify-center">
+                  <img src={mithali} className="rounded-[4px] w-[130px] h-auto" />
                 </div>
 
-                <div className="md:col-span-6 pt-10  flex flex-col items-center justify-center">
+                <div className="md:col-span-6  flex flex-col items-center justify-center">
                   <h1
                     className="text-black font-semibold text-xl md:text-3xl lg:text-4xl xl:text-5xl"
                     style={{ fontFamily: "Poppins" }}
                   >
                     Mithali Raj
                   </h1>
-                  <i className="text-2xl lg:text-3xl xl:text-4xl font-semibold text-[#525252] mt-5">
+                  <i className="text-2xl lg:text-3xl xl:text-4xl font-semibold text-[#525252] mt-2">
                     FullStack Developer
                   </i>
                   <p
-                    className="text-[#00D3FF] font-bold text-xl md:text-2xl mt-4"
+                    className="text-[#00D3FF] font-bold text-xl md:text-2xl mt-2"
                     style={{ fontFamily: "Poppins" }}
                   >
                     Placed In
@@ -1775,7 +1775,7 @@ function Home2() {
       {/* join-section */}
       <div
         className="grid grid-cols-1 md:grid-cols-12 gap-5 mx-5 
-      md:mx-20 lg:mx-32 xl:mx-48 mt-12"
+      md:mx-20 lg:mx-32 xl:mx-48 mt-5 md:mt-10"
       >
         <div className="md:col-span-7">
           <h1 className="" style={{ fontFamily: "Poppins" }}>
@@ -1842,7 +1842,7 @@ function Home2() {
 
       {/* elevator */}
 
-      <div className="elevator-image mx-5 md:mx-20 lg:mx-32 xl:mx-48 mt-14 p-10 mt-5">
+      <div className="elevator-image mx-0 md:mx-20 lg:mx-32 xl:mx-48 mt-10 p-5 md:p-10">
         {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           <div>
             <h1 className="text-white">Elevate your Career Today!</h1>
@@ -2000,7 +2000,7 @@ function Home2() {
 
       {/* client-review */}
 
-      <div className="mt-5 md:mt-14 mx-5 md:mx-20 lg:mx-32 xl:mx-48">
+      <div className="mt-10 md:mt-14 mx-5 md:mx-20 lg:mx-32 xl:mx-48">
         <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-seibold">
           What Our Client Said About Us
         </h1>
