@@ -57,6 +57,7 @@ import webtalentImgPdf from "./images/webtalentScreensort.PNG";
 import DigitalGravityPdf from "./images/Digital Gravity Purposal__.pdf";
 import digitalgravityImgPdf from "./images/digitalgravityScreensort.PNG";
 import emailjs from "@emailjs/browser";
+import ReactGA from "react-ga";
 
 const faqs = [
   {
@@ -80,6 +81,65 @@ const faqs = [
 ];
 
 function Home2() {
+  useEffect(() => {
+    ReactGA.initialize("UA-286352148-1");
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
+  // const [formData, setFormData] = useState({
+  //   name: "",
+  //   phoneNumber: "",
+  //   cityType: "",
+  //   email: "",
+  //   message: "",
+  // });
+  // const handleInputChange = (e) => {
+  //   const { name, value } = e.target;
+  //   setFormData((prevData) => ({
+  //     ...prevData,
+  //     [name]: value,
+  //   }));
+  // };
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   console.log("Submitted data:", formData);
+
+  //   setFormData({
+  //     name: "",
+  //     phoneNumber: "",
+  //     cityType: "",
+  //     email: "",
+  //     message: "",
+  //   });
+  // };
+
+  // const formRef = useRef();
+  // const sendEmail = (e) => {
+  //   e.preventDefault();
+
+  //   emailjs
+  //     .sendForm(
+  //       "service_fou94i9",
+  //       "template_cido1v7",
+  //       formRef.current,
+  //       "jwkvXtuG3BVhmwYVq"
+  //     )
+  //     .then(
+  //       (result) => {
+  //         console.log(result.text);
+  //         setFormData({
+  //           name: "",
+  //           phoneNumber: "",
+  //           cityType: "",
+  //           email: "",
+  //           message: "",
+  //         });
+  //       },
+  //       (error) => {
+  //         console.log(error.text);
+  //       }
+  //     );
+  // };
+
   const [formData, setFormData] = useState({
     name: "",
     phoneNumber: "",
@@ -87,6 +147,14 @@ function Home2() {
     email: "",
     message: "",
   });
+
+  const formRef = useRef();
+
+  useEffect(() => {
+    // Initialize Google Analytics with your tracking ID
+    ReactGA.initialize("UA-286352148-1");
+  }, []);
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -94,9 +162,17 @@ function Home2() {
       [name]: value,
     }));
   };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Submitted data:", formData);
+
+    // Track form submission in Google Analytics
+    ReactGA.event({
+      category: "Form",
+      action: "Submit",
+      label: "Contact Form",
+    });
 
     // Reset form fields after submission
     setFormData({
@@ -109,22 +185,28 @@ function Home2() {
   };
 
   // emailjs
-  const formRef = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
+
+    console.log("Submitted data:", formData);
 
     emailjs
       .sendForm(
         "service_fou94i9",
         "template_cido1v7",
-         formRef.current,
+        formRef.current,
         "jwkvXtuG3BVhmwYVq"
       )
       .then(
         (result) => {
           console.log(result.text);
 
-          // Reset form fields after successful email submission
+          ReactGA.event({
+            category: "Email",
+            action: "Send",
+            label: "Contact Form",
+          });
+
           setFormData({
             name: "",
             phoneNumber: "",
@@ -139,6 +221,60 @@ function Home2() {
       );
   };
 
+  // const [formData1, setFormData1] = useState({
+  //   name: "",
+  //   phoneNumber: "",
+  //   cityType: "",
+  //   email: "",
+  //   message: "",
+  // });
+  // const handleInputChange1 = (e) => {
+  //   const { name, value } = e.target;
+  //   setFormData1((prevData) => ({
+  //     ...prevData,
+  //     [name]: value,
+  //   }));
+  // };
+  // const handleSubmit1 = (e) => {
+  //   e.preventDefault();
+  //   console.log("Submitted data:", formData1);
+  //   setFormData1({
+  //     name: "",
+  //     phoneNumber: "",
+  //     cityType: "",
+  //     email: "",
+  //     message: "",
+  //   });
+  // };
+
+  // const form1Ref = useRef();
+  // const sendEmail1 = (e) => {
+  //   e.preventDefault();
+
+  //   emailjs
+  //     .sendForm(
+  //       "service_fou94i9",
+  //       "template_cido1v7",
+  //       form1Ref.current,
+  //       "jwkvXtuG3BVhmwYVq"
+  //     )
+  //     .then(
+  //       (result) => {
+  //         console.log(result.text);
+  //         setFormData1({
+  //           name: "",
+  //           phoneNumber: "",
+  //           cityType: "",
+  //           email: "",
+  //           message: "",
+  //         });
+  //       },
+  //       (error) => {
+  //         console.log(error.text);
+  //       }
+  //     );
+  // };
+
   const [formData1, setFormData1] = useState({
     name: "",
     phoneNumber: "",
@@ -146,6 +282,14 @@ function Home2() {
     email: "",
     message: "",
   });
+
+  const form1Ref = useRef();
+
+  useEffect(() => {
+    // Initialize Google Analytics with your tracking ID
+    ReactGA.initialize("UA-286352148-1");
+  }, []);
+
   const handleInputChange1 = (e) => {
     const { name, value } = e.target;
     setFormData1((prevData) => ({
@@ -153,9 +297,17 @@ function Home2() {
       [name]: value,
     }));
   };
+
   const handleSubmit1 = (e) => {
     e.preventDefault();
     console.log("Submitted data:", formData1);
+
+    // Track form submission in Google Analytics
+    ReactGA.event({
+      category: "Form",
+      action: "Submit",
+      label: "Form 1",
+    });
 
     // Reset form fields after submission
     setFormData1({
@@ -168,9 +320,10 @@ function Home2() {
   };
 
   // emailjs
-  const form1Ref = useRef();
   const sendEmail1 = (e) => {
     e.preventDefault();
+
+    console.log("Submitted data:", formData1);
 
     emailjs
       .sendForm(
@@ -182,6 +335,13 @@ function Home2() {
       .then(
         (result) => {
           console.log(result.text);
+
+          // Track successful email submission in Google Analytics
+          ReactGA.event({
+            category: "Email",
+            action: "Send",
+            label: "Form 1",
+          });
 
           // Reset form fields after successful email submission
           setFormData1({
@@ -1423,7 +1583,10 @@ function Home2() {
             <div className="rounded-2xl border-4 border-[#00D3FF] px-5 pb-3">
               <div className="grid grid-cols-1 gap-5 ">
                 <div className="md:col-span-3 pt-5 flex justify-center">
-                  <img src={prateek} className="rounded-[4px] w-[130px] h-auto" />
+                  <img
+                    src={prateek}
+                    className="rounded-[4px] w-[130px] h-auto"
+                  />
                 </div>
 
                 <div className="md:col-span-6 flex flex-col items-center justify-center">
@@ -1501,7 +1664,10 @@ function Home2() {
             <div className="rounded-2xl border-4 border-[#00D3FF] px-5 pb-3">
               <div className="grid grid-cols-1 gap-5">
                 <div className="md:col-span-3 pt-5 flex justify-center">
-                  <img src={nilanshi} className="rounded-[4px] w-[140px] h-auto" />
+                  <img
+                    src={nilanshi}
+                    className="rounded-[4px] w-[140px] h-auto"
+                  />
                 </div>
 
                 <div className="md:col-span-6 flex flex-col items-center justify-center">
@@ -1540,7 +1706,10 @@ function Home2() {
             <div className="rounded-2xl border-4 border-[#00D3FF] px-5 pb-3">
               <div className="grid grid-cols-1 gap-5">
                 <div className="md:col-span-3 pt-5 flex justify-center">
-                  <img src={avdhesh} className="rounded-[4px] w-[150px] h-auto" />
+                  <img
+                    src={avdhesh}
+                    className="rounded-[4px] w-[150px] h-auto"
+                  />
                 </div>
 
                 <div className="md:col-span-6 flex flex-col items-center justify-center">
@@ -1579,7 +1748,10 @@ function Home2() {
             <div className="rounded-2xl border-4 border-[#00D3FF] px-5 pb-3">
               <div className="grid grid-cols-1 gap-5">
                 <div className="md:col-span-3 pt-5 flex justify-center">
-                  <img src={rishbh} className="rounded-[4px] w-[120px] h-auto" />
+                  <img
+                    src={rishbh}
+                    className="rounded-[4px] w-[120px] h-auto"
+                  />
                 </div>
 
                 <div className="md:col-span-6 flex flex-col items-center justify-center">
@@ -1618,7 +1790,10 @@ function Home2() {
             <div className="rounded-2xl border-4 border-[#00D3FF] px-5 pb-3">
               <div className="grid grid-cols-1  gap-5">
                 <div className="md:col-span-3 pt-5 flex justify-center">
-                  <img src={ashish} className="rounded-[4px] w-[150px] h-auto" />
+                  <img
+                    src={ashish}
+                    className="rounded-[4px] w-[150px] h-auto"
+                  />
                 </div>
 
                 <div className="md:col-span-6 flex flex-col items-center justify-center ">
@@ -1735,7 +1910,10 @@ function Home2() {
             <div className="rounded-2xl border-4 border-[#00D3FF] px-5 pb-3">
               <div className="grid grid-cols-1 gap-5">
                 <div className="md:col-span-3 pt-5 flex justify-center">
-                  <img src={mithali} className="rounded-[4px] w-[130px] h-auto" />
+                  <img
+                    src={mithali}
+                    className="rounded-[4px] w-[130px] h-auto"
+                  />
                 </div>
 
                 <div className="md:col-span-6  flex flex-col items-center justify-center">
