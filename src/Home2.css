@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Patua+One&family=Volkhov&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Patua+One&family=Poppins&display=swap');
+
 .home-banner-section {
     background-image: url("./images/SpaceX\ 1.gif");
     background-attachment: fixed;
@@ -12,7 +13,7 @@
   @media screen and (max-width:768px) {
     .home-banner-section{
         height: auto;
-        padding-bottom: 10px;
+        padding-bottom: 40px;
       }
   }
    .elevator-image{
@@ -23,3 +24,17 @@
     background-size: cover;
     border-radius:45px;
   }
+
+  @media screen and (max-width:576px) {
+    .elevator-image{
+      border-radius:0px;
+      }
+  }
+
+.counter-bg{
+  background-image: url("./images/background.svg");
+  background-attachment: fixed;
+  background-position:center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

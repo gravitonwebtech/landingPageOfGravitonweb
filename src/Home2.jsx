@@ -13,7 +13,7 @@ import Delloite from "./images/delloiteImg.png";
 import Jio from "./images/jioImg.jpg";
 import PlanetSpark from "./images/panetsparkImg.jfif";
 import Tcs from "./images/tcs.png";
-import Hcl from "./images/Hcl.png";
+import Hcl from "./images/HclImage.png";
 import Cognizant from "./images/cognizant.png";
 import Capgemini from "./images/Capgemini.png";
 import SliderImg from "./images/sliderImg.svg";
@@ -58,6 +58,12 @@ import DigitalGravityPdf from "./images/Digital Gravity Purposal__.pdf";
 import digitalgravityImgPdf from "./images/digitalgravityScreensort.PNG";
 import emailjs from "@emailjs/browser";
 import ReactGA from "react-ga";
+import Certificate1 from "./images/certificate1.svg";
+import Trust from "./images/Trust.svg";
+import one from "./images/1.svg";
+import two from "./images/2.svg";
+import three from "./images/3.svg";
+import four from "./images/4.svg";
 
 const faqs = [
   {
@@ -431,7 +437,10 @@ function Home2() {
   return (
     <>
       {/* banner */}
-      <div className="home-banner-section" id="home-banner-parallax">
+      <div
+        className="home-banner-section hidden md:block"
+        id="home-banner-parallax"
+      >
         <div className="main-banner grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-5 px-5 md:px-20 lg:px-28">
           <div className="pt-10 md:pt-40 lg:col-span-8">
             <h1
@@ -606,13 +615,202 @@ function Home2() {
           </div>
         </div>
       </div>
+
+      <div
+        className="home-banner-section block md:hidden"
+        id="home-banner-parallax"
+      >
+        <div className="main-banner grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 mx-5 md:px-20 lg:px-28">
+          <div className="pt-20 md:pt-40 lg:col-span-8">
+            <h1
+              className="text-5xl md:text-5xl lg:text-6xl text-white leading-[60px] text-center"
+              style={{ fontFamily: "'Patua One" }}
+            >
+              Web<span className="text-[#00D3FF]">Talent</span>
+            </h1>
+
+            <h1
+              className="text-5xl md:text-5xl lg:text-6xl text-white  text-center"
+              style={{ fontFamily: "'Patua One" }}
+            >
+              Gravity
+            </h1>
+
+            <p className="w-full sm:text-2xl lg:w-[500px] mt-6 text-white mt-0 mb-0 text-center">
+              BECOME A HIGHLY PAID PROMPT <br></br>ENGINEER (AVERAGE SALARY
+              17LPA)
+            </p>
+            <p className="w-full sm:text-2xl lg:w-[500px] mt-6 text-white mt-0 mb-0 text-center">
+              NO PRIOR TECHNICAL OR AI <br></br> KNOWLEDGE REQUIRED
+            </p>
+            <p className="w-full sm:text-2xl lg:w-[500px] mt-6 text-white mt-0 mb-0 text-center">
+              GROW YOUR SALARY UPTO 3x
+            </p>
+
+            <div className="mt-8 mr-4">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                required
+                className="bg-transparent border-2 w-full rounded-[8px] py-2 px-2"
+              />
+            </div>
+
+            <div className="mt-8">
+              <button
+                type="submit"
+                className=" text-white rounded-[70px] py-2 w-full text-lg"
+                style={{
+                  background:
+                    "linear-gradient(0deg, #0A4D68 8.68%, #05BFDB 140.45%)",
+                  transition: "all 0.5s",
+                }}
+              >
+                Let's Talk
+              </button>
+            </div>
+          </div>
+
+          <div className=" md:pt-20 lg:col-span-4">
+            <div className="bg-white shadow-2xl p-5 rounded-[4px]">
+              <h1 className="text-black text-xl text-center font-semibold">
+                Get ready to Elevate Your
+                <br />
+                Career to it’s Peak
+              </h1>
+              <p className="text-[#767676] text-md mt-3">
+                Kindly Fill your credential to start course counselling with
+                you.
+              </p>
+
+              <form ref={formRef} onSubmit={sendEmail}>
+                <div className="mb-4">
+                  <label
+                    className="block text-gray-700 text-md font-semibold"
+                    htmlFor="name"
+                  >
+                    Name
+                  </label>
+                  <input
+                    id="name"
+                    name="name"
+                    type="text"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    className="border-b-2 border-gray-500 focus:outline-none focus:border-blue-500 w-full"
+                    required
+                  />
+                </div>
+
+                <div className="mb-4">
+                  <label
+                    className="block text-gray-700 text-md font-semibold"
+                    htmlFor="phoneNumber"
+                  >
+                    Phone Number
+                  </label>
+                  <input
+                    id="phoneNumber"
+                    name="phoneNumber"
+                    type="text"
+                    value={formData.phoneNumber}
+                    onChange={handleInputChange}
+                    className="border-b-2 border-gray-500 focus:outline-none focus:border-blue-500 w-full"
+                    required
+                  />
+                </div>
+
+                <div className="mt-3">
+                  <input
+                    type="radio"
+                    id="metro"
+                    className="w-3 h-3 inline-block align-middle"
+                    name="cityType"
+                    value="I am a College Student"
+                    checked={formData.cityType === "I am a College Student"}
+                    onChange={handleInputChange}
+                  />
+                  <label
+                    htmlFor="metro"
+                    className="font-semibold inline-block align-middle ml-2"
+                  >
+                    I am a College Student
+                  </label>
+                </div>
+
+                <div>
+                  <input
+                    type="radio"
+                    id="oth"
+                    className="h-3 w-3 inline-block align-middle"
+                    name="cityType"
+                    value=" I’m a Company Employee"
+                    checked={formData.cityType === " I’m a Company Employee"}
+                    onChange={handleInputChange}
+                  />
+                  <label
+                    htmlFor="oth"
+                    className="font-semibold inline-block align-middle ml-2"
+                  >
+                    I’m a Company Employee
+                  </label>
+                </div>
+
+                <div className="mb-4 mt-3">
+                  <label
+                    className="block text-gray-700 text-md font-semibold"
+                    htmlFor="email"
+                  >
+                    Email
+                  </label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    className="border-b-2 border-gray-500 focus:outline-none focus:border-blue-500 w-full"
+                    required
+                  />
+                </div>
+
+                <div className="mb-4 mt-3">
+                  <label
+                    className="block text-gray-700 text-sm font-bold"
+                    htmlFor="message"
+                  >
+                    Message (Optional)
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="1"
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    className="border-b-2 border-gray-500 focus:outline-none focus:border-blue-500 w-full"
+                  />
+                </div>
+
+                <div className="flex justify-center mt-3">
+                  <button
+                    type="submit"
+                    className="bg-[#00D3FF] text-white rounded-[70px] px-5 py-2"
+                  >
+                    Let's Talk
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
       {/* banner */}
 
       {/* 2-section */}
       <div className="bg-[#F7F8FC] pb-10">
         <div className="pt-10">
           <h1
-            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-seibold  text-center"
+            className="text-3xl md:text-3xl lg:text-4xl font-seibold  text-center"
             style={{ fontFamily: "Volkhov" }}
           >
             What Makes Us <span className="text-[#00D3FF]">Different?</span>
@@ -623,7 +821,7 @@ function Home2() {
             proejcts which have some<br></br> common data set of users to
             perform automation of data marketing
           </p>
-          <p className="text-[#666666] font-medium mt-4 block md:hidden px-5 md:px-0">
+          <p className="text-[#666666] text-lg font-medium mt-4 block md:hidden px-5 md:px-0 text-center">
             Human analytics behaviour implementations using data science in form
             of microfrontend and microservices to integrate in any proejcts
             which have some common data set of users to perform automation of
@@ -633,7 +831,7 @@ function Home2() {
 
         <div
           className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 md:gap-12 mx-5 
-      md:mx-20 lg:mx-32 xl:mx-48 pt-10"
+      md:mx-20 lg:mx-32 xl:mx-48 pt-5"
         >
           <div className="bg-white shadow-2xl p-8">
             <img src={Icon1}></img>
@@ -670,63 +868,68 @@ function Home2() {
       md:mx-20 lg:mx-32 xl:mx-48 mt-10 md:mt-20"
       >
         <div className="">
-          <div className="grid grid-cols-2 gap-5">
+          <div className="grid grid-cols-1 gap-5">
             <div className="">
-              <span className="text-xl font-semibold">
+              <span className="text-3xl font-semibold">
                 <FontAwesomeIcon
                   icon={faCalendarCheck}
                   aria-hidden="true"
                   className="far fa-calendar-check text-[#00D3FF]"
                 />
               </span>
-              <span className="text-lg md:text-3xl xl:text-4xl font-semibold pl-5">
+              <span className="text-4xl md:text-3xl xl:text-4xl font-semibold pl-5">
                 {displayTime}
               </span>
-              <h1 className="text-sm text-[#666666] mt-2 ">EveryDay</h1>
+              <h1 className="text-sm text-[#666666] mt-2 pl-12">EveryDay</h1>
+              <div className="border-b-2 border-gray-200 py-2"></div>
             </div>
 
             <div className="">
-              <span className="text-xl font-semibold">
+              <span className="text-3xl font-semibold">
                 <FontAwesomeIcon
                   icon={faHourglass}
                   aria-hidden="true"
                   className="far fa-hourglass text-[#00D3FF]"
                 />
               </span>
-              <span className="text-lg md:text-3xl xl:text-4xl font-semibold pl-5">
+              <span className="text-4xl md:text-3xl xl:text-4xl font-semibold pl-5">
                 45Mins
               </span>
-              <h1 className="text-sm text-[#666666] mt-2 ">Course Timing</h1>
+              <h1 className="text-sm text-[#666666] mt-2 pl-12">
+                Course Timing
+              </h1>
+              <div className="border-b-2 border-gray-200 py-2"></div>
             </div>
-          </div>
 
-          <div className="grid grid-cols-2 gap-5 mt-5">
             <div className="">
-              <span className="text-xl font-semibold">
+              <span className="text-3xl font-semibold">
                 <FontAwesomeIcon
                   icon={faVideo}
                   aria-hidden="true"
                   className="fas fa-video text-[#00D3FF]"
                 />
               </span>
-              <span className="text-lg md:text-3xl xl:text-4xl font-semibold pl-5">
+              <span className="text-4xl md:text-3xl xl:text-4xl font-semibold pl-5">
                 Daily
               </span>
-              <h1 className="text-sm text-[#666666] mt-2 ">Live Session</h1>
+              <h1 className="text-sm text-[#666666] mt-2 pl-14">
+                Live Session
+              </h1>
+              <div className="border-b-2 border-gray-200 py-2"></div>
             </div>
 
             <div className="">
-              <span className="text-xl font-semibold">
+              <span className="text-3xl font-semibold">
                 <FontAwesomeIcon
                   icon={faClock}
                   aria-hidden="true"
                   className="far fa-clock text-[#00D3FF]"
                 />
               </span>
-              <span className="text-lg md:text-3xl xl:text-4xl font-semibold pl-5">
+              <span className="text-4xl md:text-3xl xl:text-4xl font-semibold pl-5">
                 11:00 AM{" "}
               </span>
-              <h1 className="text-sm text-[#666666] mt-2 ">Onwards</h1>
+              <h1 className="text-sm text-[#666666] mt-2 pl-12">Onwards</h1>
             </div>
           </div>
         </div>
@@ -1005,7 +1208,7 @@ function Home2() {
       </div>
 
       {/* certificate */}
-      <div className="justify-center mt-5">
+      <div className="justify-center mt-5 hidden md:block">
         <img
           src={thirdcertificate}
           className="certificate-banner-image"
@@ -1015,7 +1218,7 @@ function Home2() {
 
       {/* counter */}
       <div
-        className="font-extralight grid grid-cols-1 lg:grid-cols-4 items-center bg-opacity-85 py-6 px-16"
+        className="hidden md:block font-extralight grid grid-cols-1 lg:grid-cols-4 items-center bg-opacity-85 py-6 px-16"
         style={{
           background:
             "linear-gradient(97.41deg, #0A4D68 8.68%, #05BFDB 140.45%)",
@@ -1054,6 +1257,94 @@ function Home2() {
           </h3>
           <h3 className="text-white font-bold text-lg">Campuses</h3>
         </div>
+      </div>
+
+      {/* small-device */}
+
+      <div className="bg-[#0A4D68] mt-5 p-5 block md:hidden">
+        <h1
+          className="text-center text-white"
+          style={{ fontFamily: "Volkhov" }}
+        >
+          Get Your Own<br></br> Blockchain-Enabled<br></br>
+          <span className="text-[#05BFDB]"> Digital Certificate</span>
+        </h1>
+
+        <div className="grid grid-cols-12 mt-8">
+          <div className="col-span-4">
+            <div>
+              <h3 className="text-center text-lg text-white">
+                <CountUp start={0} end={1000} duration={10} />
+                <span>+</span>
+              </h3>
+              <h6 className="text-white text-sm text-center">Learners</h6>
+            </div>
+
+            <div>
+              <h3 className="text-white text-lg text-center mt-8">
+              <CountUp start={0} end={50} duration={10} />
+            <span>+</span>
+              </h3>
+              <h3 className="text-white text-sm text-center">Hiring Partners</h3>
+            </div>
+
+            <div>
+              <h3 className="text-white  text-lg text-center mt-8">
+                <CountUp start={0} end={18} duration={10} />
+                <span>+</span>
+              </h3>
+              <h3 className="text-white  text-sm  text-center"> Live Concurrent Batches</h3>
+            </div>
+
+            <div>
+              <h3 className="text-white  text-lg text-center mt-8">
+              <CountUp start={0} end={5} duration={10} />
+            <span>+</span>
+              </h3>
+              <h3 className="text-white text-sm text-center">Campuses</h3>
+            </div>
+          </div>
+
+          <div className="col-span-8">
+            <div className="flex justify-center">
+              <img src={Certificate1}></img>
+            </div>
+
+            <div className="grid grid-cols-2 gap-5">
+              <div>
+                <div className="flex justify-center">
+                  <img src={one} className=""></img>
+                </div>
+                <h1 className=" text-sm text-white text-center">Trust</h1>
+              </div>
+
+              <div>
+                <div className="flex justify-center">
+                  <img src={two} className=""></img>
+                </div>
+                <h1 className=" text-sm text-white text-center">Transparency</h1>
+              </div>
+
+              <div>
+                <div className="flex justify-center">
+                  <img src={three} className=""></img>
+                </div>
+                <h1 className=" text-sm text-white text-center">Accountability</h1>
+              </div>
+
+              <div>
+                <div className="flex justify-center">
+                  <img src={four} className=""></img>
+                </div>
+                <h1 className=" text-sm text-white text-center">Social Media</h1>
+              </div>
+            </div>
+
+
+          </div>
+
+        </div>
+
       </div>
 
       {/* placed section */}
@@ -1956,13 +2247,27 @@ function Home2() {
       md:mx-20 lg:mx-32 xl:mx-48 mt-5 md:mt-10"
       >
         <div className="md:col-span-7">
-          <h1 className="" style={{ fontFamily: "Poppins" }}>
+          <h1 className="hidden md:block" style={{ fontFamily: "Poppins" }}>
             Why Join This<br></br> Course?
           </h1>
-          <p className="text-[#666666]">
+
+          <h1
+            className="block md:hidden text-4xl text-center"
+            style={{ fontFamily: "Poppins" }}
+          >
+            Why Join This<br></br> Course?
+          </h1>
+
+          <p className="text-[#666666] hidden md:block">
             #1 🇮🇳 We're highest rated program in the world 🌎<br></br>{" "}
             Accelerate your career at price of less than a chai ☕!
           </p>
+
+          <p className="text-[#666666] blockmd:hidden text-center mt-4">
+            #1 🇮🇳 We're highest rated program in the world 🌎 Accelerate your
+            career at price of less than a chai ☕!
+          </p>
+
           <img src={JoinImg} className="w-full md:w-3/4 mt-5"></img>
         </div>
 
@@ -2040,7 +2345,12 @@ function Home2() {
           </div>
         </div> */}
         <div className="">
-          <h1 className="text-white text-center">Elevate your Career Today!</h1>
+          <h1 className="hidden md:block text-white text-center">
+            Elevate your Career Today!
+          </h1>
+          <h1 className="block md:hidden text-4xl text-white text-center">
+            Elevate your <br></br>Career Today!
+          </h1>
           <p className="text-white text-center mt-2">
             Fillup form to start your journey with us
           </p>
@@ -2336,7 +2646,7 @@ function Home2() {
       {/* faq's */}
       <div
         className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-12 mx-5 
-      md:mx-20 lg:mx-32 xl:mx-48 mt-10 md:mt-20"
+      md:mx-20 lg:mx-32 xl:mx-48 mt-10 md:mt-20 mb-10 md:mb-20"
       >
         <div className="">
           {faqs.map((faq) => (
@@ -2362,26 +2672,66 @@ function Home2() {
         </div>
 
         <div className="">
-          <h1 className="font-medium text-xl md:text-3xl">
+          <h1
+            className="hidden md:block font-medium text-xl md:text-3xl"
+            style={{ fontFamily: "Poppins" }}
+          >
             How We Can Help You?
           </h1>
-          <p className="text-md text-[#666666] mt-3">
+
+          <h1
+            className=" text-3xl block md:hidden text-center"
+            style={{ fontFamily: "Poppins" }}
+          >
+            How We Can Help You?
+          </h1>
+
+          <p className="text-md text-[#666666] mt-3 hidden md:block">
             Follow our newsletter. We will regulary update<br></br> our latest
             project and availability.
           </p>
+
+          <p className="text-md text-[#666666] mt-3 block md:hidden text-center">
+            Follow our newsletter. We will regulary update our latest project
+            and availability.
+          </p>
+
           <input
             type="email"
             placeholder="Enter your email"
             required
-            className="bg-[#FAFAFA] border-2 rounded-[37px] p-2 mt-5"
+            className="bg-[#FAFAFA] border-2 rounded-[37px] p-2 mt-5 hidden md:block"
           />
+
+          <div className="mr-5">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              required
+              className="bg-[#FAFAFA] border-2 w-full rounded-[37px] p-2 mt-5 block md:hidden"
+            />
+          </div>
 
           <button
             type="submit"
-            className="mt-4 md:mt-0 ml-2 lg:ml-5 bg-[#3461FF] text-white rounded-[70px] px-5 py-2"
+            className="hidden md:block mt-4 md:mt-0 ml-2 lg:ml-5 bg-[#3461FF] text-white rounded-[70px] px-5 py-2"
           >
             Let's Talk
           </button>
+
+          <div>
+            <button
+              type="submit"
+              className="block md:hidden mt-4 w-full text-white text-lg rounded-[70px] py-2"
+              style={{
+                background:
+                  "linear-gradient(0deg, #0A4D68 8.68%, #05BFDB 140.45%)",
+                transition: "all 0.5s",
+              }}
+            >
+              Let's Talk
+            </button>
+          </div>
         </div>
       </div>
     </>
