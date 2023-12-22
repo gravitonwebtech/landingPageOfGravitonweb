@@ -1217,7 +1217,7 @@ function Home2() {
       </div>
 
       {/* counter */}
-      <div
+      {/* <div
         className="hidden md:block font-extralight grid grid-cols-1 lg:grid-cols-4 items-center bg-opacity-85 py-6 px-16"
         style={{
           background:
@@ -1257,7 +1257,7 @@ function Home2() {
           </h3>
           <h3 className="text-white font-bold text-lg">Campuses</h3>
         </div>
-      </div>
+      </div> */}
 
       {/* small-device */}
 
