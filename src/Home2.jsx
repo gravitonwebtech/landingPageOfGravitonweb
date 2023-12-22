@@ -1217,8 +1217,9 @@ function Home2() {
       </div>
 
       {/* counter */}
-      {/* <div
-        className="hidden md:block font-extralight grid grid-cols-1 lg:grid-cols-4 items-center bg-opacity-85 py-6 px-16"
+      <div className="hidden md:block">
+      <div
+        className="font-extralight grid grid-cols-1 lg:grid-cols-4 items-center bg-opacity-85 py-6 px-16"
         style={{
           background:
             "linear-gradient(97.41deg, #0A4D68 8.68%, #05BFDB 140.45%)",
@@ -1257,7 +1258,8 @@ function Home2() {
           </h3>
           <h3 className="text-white font-bold text-lg">Campuses</h3>
         </div>
-      </div> */}
+      </div>
+      </div>
 
       {/* small-device */}
 
@@ -2696,33 +2698,43 @@ function Home2() {
             and availability.
           </p>
 
+          <div className="hidden md:block">
+
           <input
             type="email"
             placeholder="Enter your email"
             required
-            className="bg-[#FAFAFA] border-2 rounded-[37px] p-2 mt-5 hidden md:block"
+            className="bg-[#FAFAFA] border-2 rounded-[37px] p-2 mt-5 "
           />
+
+          
+           <button
+            type="submit"
+            className=" mt-4 md:mt-0 ml-2 lg:ml-5 bg-[#3461FF] text-white rounded-[70px] px-5 py-2"
+          >
+            Let's Talk
+          </button>
+
+          </div>
+
+
+          <div className="block md:hidden">
+
 
           <div className="mr-5">
             <input
               type="email"
               placeholder="Enter your email"
               required
-              className="bg-[#FAFAFA] border-2 w-full rounded-[37px] p-2 mt-5 block md:hidden"
+              className="bg-[#FAFAFA] border-2 w-full rounded-[37px] p-2 mt-5 "
             />
           </div>
 
-          <button
-            type="submit"
-            className="hidden md:block mt-4 md:mt-0 ml-2 lg:ml-5 bg-[#3461FF] text-white rounded-[70px] px-5 py-2"
-          >
-            Let's Talk
-          </button>
 
           <div>
             <button
               type="submit"
-              className="block md:hidden mt-4 w-full text-white text-lg rounded-[70px] py-2"
+              className=" mt-4 w-full text-white text-lg rounded-[70px] py-2"
               style={{
                 background:
                   "linear-gradient(0deg, #0A4D68 8.68%, #05BFDB 140.45%)",
@@ -2731,6 +2743,8 @@ function Home2() {
             >
               Let's Talk
             </button>
+          </div>
+
           </div>
         </div>
       </div>
