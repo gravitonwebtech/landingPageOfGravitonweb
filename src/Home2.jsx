@@ -948,7 +948,7 @@ function Home2() {
       </div>
 
       {/* 4-section */}
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-5  mx-5 lg:mx-20 xl:mx-28">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-5 mt-10 mx-5 lg:mx-20 xl:mx-28">
         <div className="md:col-span-5 mt-5 md:mt-0">
           <img src={LayoutImg} className="w-full lg:w-3/4"></img>
         </div>
