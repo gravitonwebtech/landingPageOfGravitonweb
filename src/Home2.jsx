@@ -867,8 +867,76 @@ function Home2() {
         className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-12 mx-5 
       md:mx-20 lg:mx-32 xl:mx-48 mt-10 md:mt-20"
       >
-        <div className="">
-          <div className="grid grid-cols-1 gap-5">
+
+       <div className="hidden md:block">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div className="">
+              <span className="text-xl font-semibold">
+                <FontAwesomeIcon
+                  icon={faCalendarCheck}
+                  aria-hidden="true"
+                  className="far fa-calendar-check text-[#00D3FF]"
+                />
+              </span>
+              <span className="text-2xl md:text-3xl xl:text-4xl font-semibold pl-5">
+                {displayTime}
+              </span>
+              <h1 className="text-sm text-[#666666] mt-2 pl-10">EveryDay</h1>
+             
+            </div>
+
+            <div className="">
+              <span className="text-xl font-semibold">
+                <FontAwesomeIcon
+                  icon={faHourglass}
+                  aria-hidden="true"
+                  className="far fa-hourglass text-[#00D3FF]"
+                />
+              </span>
+              <span className="text-2xl md:text-3xl xl:text-4xl font-semibold pl-5">
+                45Mins
+              </span>
+              <h1 className="text-sm text-[#666666] mt-2 pl-10">
+                Course Timing
+              </h1>
+              
+            </div>
+
+            <div className="mt-10">
+              <span className="text-xl font-semibold">
+                <FontAwesomeIcon
+                  icon={faVideo}
+                  aria-hidden="true"
+                  className="fas fa-video text-[#00D3FF]"
+                />
+              </span>
+              <span className="text-2xl md:text-3xl xl:text-4xl font-semibold pl-5">
+                Daily
+              </span>
+              <h1 className="text-sm text-[#666666] mt-2 pl-10">
+                Live Session
+              </h1>
+             
+            </div>
+
+            <div className="mt-10">
+              <span className="text-xl font-semibold">
+                <FontAwesomeIcon
+                  icon={faClock}
+                  aria-hidden="true"
+                  className="far fa-clock text-[#00D3FF]"
+                />
+              </span>
+              <span className="text-2xl md:text-3xl xl:text-4xl font-semibold pl-5">
+                11:00 AM{" "}
+              </span>
+              <h1 className="text-sm text-[#666666] mt-2 pl-10">Onwards</h1>
+            </div>
+          </div>
+        </div>
+
+        <div className="block md:hidden">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             <div className="">
               <span className="text-3xl font-semibold">
                 <FontAwesomeIcon
@@ -948,7 +1016,7 @@ function Home2() {
       </div>
 
       {/* 4-section */}
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-5 mt-10 mx-5 lg:mx-20 xl:mx-28">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-5 mx-5 lg:mx-20 xl:mx-28">
         <div className="md:col-span-5 mt-5 md:mt-0">
           <img src={LayoutImg} className="w-full lg:w-3/4"></img>
         </div>
