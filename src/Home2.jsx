@@ -2333,7 +2333,7 @@ function Home2() {
             Accelerate your career at price of less than a chai ☕!
           </p>
 
-          <p className="text-[#666666] blockmd:hidden text-center mt-4">
+          <p className="text-[#666666] block md:hidden text-center mt-4">
             #1 🇮🇳 We're highest rated program in the world 🌎 Accelerate your
             career at price of less than a chai ☕!
           </p>
