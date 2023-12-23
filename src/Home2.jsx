@@ -60,10 +60,14 @@ import emailjs from "@emailjs/browser";
 import ReactGA from "react-ga";
 import Certificate1 from "./images/certificate1.svg";
 import Trust from "./images/Trust.svg";
+import Accountability from "./images/Accountability.svg";
+import SocialMediaSharing from "./images/Social Media Sharing.svg";
+import Transparency from "./images/Transparency.svg";
 import one from "./images/1.svg";
 import two from "./images/2.svg";
 import three from "./images/3.svg";
 import four from "./images/4.svg";
+import Background from "./images/backgroundcolor.svg";
 
 const faqs = [
   {
@@ -171,7 +175,30 @@ function Home2() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Submitted data:", formData);
+    // console.log("Submitted data:", formData);
+
+    // var myHeaders = new Headers();
+    // myHeaders.append("Content-Type", "application/json");
+
+    // var raw = JSON.stringify({
+    //   firstname: formData.name,
+    //   lastname: formData.city,
+    //   email: formData.email,
+    //   phone: formData.phoneNumber,
+    //   message: formData.message,
+    // });
+
+    // var requestOptions = {
+    //   method: "POST",
+    //   headers: myHeaders,
+    //   body: raw,
+    //   redirect: "follow",
+    // };
+
+    // fetch("https://gravitonweb.co.in/main/contact_api/", requestOptions)
+    //   .then((response) => response.text())
+    //   .then((result) => console.log(result))
+    //   .catch((error) => console.log("error", error));
 
     // Track form submission in Google Analytics
     ReactGA.event({
@@ -329,7 +356,7 @@ function Home2() {
   const sendEmail1 = (e) => {
     e.preventDefault();
 
-    console.log("Submitted data:", formData1);
+    // console.log("Submitted data:", formData1);
 
     emailjs
       .sendForm(
@@ -867,8 +894,7 @@ function Home2() {
         className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-12 mx-5 
       md:mx-20 lg:mx-32 xl:mx-48 mt-10 md:mt-20"
       >
-
-       <div className="hidden md:block">
+        <div className="hidden md:block">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             <div className="">
               <span className="text-xl font-semibold">
@@ -882,7 +908,6 @@ function Home2() {
                 {displayTime}
               </span>
               <h1 className="text-sm text-[#666666] mt-2 pl-10">EveryDay</h1>
-             
             </div>
 
             <div className="">
@@ -899,7 +924,6 @@ function Home2() {
               <h1 className="text-sm text-[#666666] mt-2 pl-10">
                 Course Timing
               </h1>
-              
             </div>
 
             <div className="mt-10">
@@ -916,7 +940,6 @@ function Home2() {
               <h1 className="text-sm text-[#666666] mt-2 pl-10">
                 Live Session
               </h1>
-             
             </div>
 
             <div className="mt-10">
@@ -1286,52 +1309,52 @@ function Home2() {
 
       {/* counter */}
       <div className="hidden md:block">
-      <div
-        className="font-extralight grid grid-cols-1 lg:grid-cols-4 items-center bg-opacity-85 py-6 px-16"
-        style={{
-          background:
-            "linear-gradient(97.41deg, #0A4D68 8.68%, #05BFDB 140.45%)",
-        }}
-      >
-        <div className="p-4 rounded m-4 text-center">
-          <h3 className="text-white font-semibold text-6xl">
-            <CountUp start={0} end={1000} duration={10} />
-            <span>+</span>
-          </h3>
-          <h3 className="text-white font-bold text-lg">Learners</h3>
-        </div>
+        <div
+          className="font-extralight grid grid-cols-1 lg:grid-cols-4 items-center bg-opacity-85 py-6 px-16"
+          style={{
+            background:
+              "linear-gradient(97.41deg, #0A4D68 8.68%, #05BFDB 140.45%)",
+          }}
+        >
+          <div className="p-4 rounded m-4 text-center">
+            <h3 className="text-white font-semibold text-6xl">
+              <CountUp start={0} end={1000} duration={10} />
+              <span>+</span>
+            </h3>
+            <h3 className="text-white font-bold text-lg">Learners</h3>
+          </div>
 
-        <div className="p-4 rounded m-4 text-center">
-          <h3 className="text-white font-semibold text-6xl">
-            <CountUp start={0} end={50} duration={10} />
-            <span>+</span>
-          </h3>
-          <h3 className="text-white font-bold text-lg">Hiring Partners</h3>
-        </div>
+          <div className="p-4 rounded m-4 text-center">
+            <h3 className="text-white font-semibold text-6xl">
+              <CountUp start={0} end={50} duration={10} />
+              <span>+</span>
+            </h3>
+            <h3 className="text-white font-bold text-lg">Hiring Partners</h3>
+          </div>
 
-        <div className="p-4 rounded m-4 text-center">
-          <h3 className="text-white font-semibold text-6xl">
-            <CountUp start={0} end={18} duration={10} />
-            <span>+</span>
-          </h3>
-          <h3 className="text-white font-bold text-lg">
-            Live Concurrent Batches
-          </h3>
-        </div>
+          <div className="p-4 rounded m-4 text-center">
+            <h3 className="text-white font-semibold text-6xl">
+              <CountUp start={0} end={18} duration={10} />
+              <span>+</span>
+            </h3>
+            <h3 className="text-white font-bold text-lg">
+              Live Concurrent Batches
+            </h3>
+          </div>
 
-        <div className="p-4 rounded m-4 text-center">
-          <h3 className="text-white font-semibold text-6xl">
-            <CountUp start={0} end={5} duration={10} />
-            <span>+</span>
-          </h3>
-          <h3 className="text-white font-bold text-lg">Campuses</h3>
+          <div className="p-4 rounded m-4 text-center">
+            <h3 className="text-white font-semibold text-6xl">
+              <CountUp start={0} end={5} duration={10} />
+              <span>+</span>
+            </h3>
+            <h3 className="text-white font-bold text-lg">Campuses</h3>
+          </div>
         </div>
-      </div>
       </div>
 
       {/* small-device */}
 
-      <div className="bg-[#0A4D68] mt-5 p-5 block md:hidden">
+      <div className="bg-[#0A4D68] mt-5 pt-4 block md:hidden">
         <h1
           className="text-center text-white"
           style={{ fontFamily: "Volkhov" }}
@@ -1340,38 +1363,45 @@ function Home2() {
           <span className="text-[#05BFDB]"> Digital Certificate</span>
         </h1>
 
-        <div className="grid grid-cols-12 mt-8">
+        <div className="grid grid-cols-12 gap-1 mt-8">
           <div className="col-span-4">
-            <div>
-              <h3 className="text-center text-lg text-white">
-                <CountUp start={0} end={1000} duration={10} />
-                <span>+</span>
-              </h3>
-              <h6 className="text-white text-sm text-center">Learners</h6>
-            </div>
+            <div className="background-counter">
+              <div>
+                <h3 className="text-center text-lg text-white pt-5">
+                  <CountUp start={0} end={1000} duration={10} />
+                  <span>+</span>
+                </h3>
+                <h6 className="text-white text-sm text-center">Learners</h6>
+              </div>
 
-            <div>
-              <h3 className="text-white text-lg text-center mt-8">
-              <CountUp start={0} end={50} duration={10} />
-            <span>+</span>
-              </h3>
-              <h3 className="text-white text-sm text-center">Hiring Partners</h3>
-            </div>
+              <div>
+                <h3 className="text-white text-lg text-center pt-12">
+                  <CountUp start={0} end={50} duration={10} />
+                  <span>+</span>
+                </h3>
+                <h3 className="text-white text-sm text-center">
+                  Hiring Partners
+                </h3>
+              </div>
 
-            <div>
-              <h3 className="text-white  text-lg text-center mt-8">
-                <CountUp start={0} end={18} duration={10} />
-                <span>+</span>
-              </h3>
-              <h3 className="text-white  text-sm  text-center"> Live Concurrent Batches</h3>
-            </div>
+              <div>
+                <h3 className="text-white  text-lg text-center pt-12">
+                  <CountUp start={0} end={18} duration={10} />
+                  <span>+</span>
+                </h3>
+                <h3 className="text-white  text-sm  text-center">
+                  {" "}
+                  Live Concurrent Batches
+                </h3>
+              </div>
 
-            <div>
-              <h3 className="text-white  text-lg text-center mt-8">
-              <CountUp start={0} end={5} duration={10} />
-            <span>+</span>
-              </h3>
-              <h3 className="text-white text-sm text-center">Campuses</h3>
+              <div>
+                <h3 className="text-white  text-lg text-center pt-12">
+                  <CountUp start={0} end={5} duration={10} />
+                  <span>+</span>
+                </h3>
+                <h3 className="text-white text-sm text-center">Campuses</h3>
+              </div>
             </div>
           </div>
 
@@ -1380,41 +1410,55 @@ function Home2() {
               <img src={Certificate1}></img>
             </div>
 
-            <div className="grid grid-cols-2 gap-5">
+            <div className="grid grid-cols-4 gap-5 ml-8 mb-3">
               <div>
-                <div className="flex justify-center">
-                  <img src={one} className=""></img>
+                <div className="">
+                  <img src={one} className="w-[37px] h-[37px]"></img>
                 </div>
-                <h1 className=" text-sm text-white text-center">Trust</h1>
+                {/* <h1 className=" text-sm text-white text-center">Trust</h1> */}
+                <div className="mt-3">
+                  <img src={Trust} className="w-[63px] h-[48px]"></img>
+                </div>
               </div>
 
               <div>
-                <div className="flex justify-center">
-                  <img src={two} className=""></img>
+                <div className="">
+                  <img src={two} className="w-[37px] h-[37px]"></img>
                 </div>
-                <h1 className=" text-sm text-white text-center">Transparency</h1>
+                {/* <h1 className=" text-sm text-white text-center">Transparency</h1> */}
+                <div className="mt-3">
+                  <img src={Transparency} className="w-[150px] h-[110px]"></img>
+                </div>
               </div>
 
               <div>
-                <div className="flex justify-center">
-                  <img src={three} className=""></img>
+                <div className="">
+                  <img src={three} className="w-[37px] h-[37px]"></img>
                 </div>
-                <h1 className=" text-sm text-white text-center">Accountability</h1>
+                {/* <h1 className=" text-sm text-white text-center">Accountability</h1> */}
+                <div className="mt-3">
+                  <img
+                    src={Accountability}
+                    className="w-[160px] h-[120px]"
+                  ></img>
+                </div>
               </div>
 
               <div>
-                <div className="flex justify-center">
-                  <img src={four} className=""></img>
+                <div className="">
+                  <img src={four} className="w-[37px] h-[37px]"></img>
                 </div>
-                <h1 className=" text-sm text-white text-center">Social Media</h1>
+                {/* <h1 className=" text-sm text-white text-center">Social Media</h1> */}
+                <div className="mt-3">
+                  <img
+                    src={SocialMediaSharing}
+                    className="w-[190px] h-[160px]"
+                  ></img>
+                </div>
               </div>
             </div>
-
-
           </div>
-
         </div>
-
       </div>
 
       {/* placed section */}
@@ -2767,52 +2811,44 @@ function Home2() {
           </p>
 
           <div className="hidden md:block">
-
-          <input
-            type="email"
-            placeholder="Enter your email"
-            required
-            className="bg-[#FAFAFA] border-2 rounded-[37px] p-2 mt-5 "
-          />
-
-          
-           <button
-            type="submit"
-            className=" mt-4 md:mt-0 ml-2 lg:ml-5 bg-[#3461FF] text-white rounded-[70px] px-5 py-2"
-          >
-            Let's Talk
-          </button>
-
-          </div>
-
-
-          <div className="block md:hidden">
-
-
-          <div className="mr-5">
             <input
               type="email"
               placeholder="Enter your email"
               required
-              className="bg-[#FAFAFA] border-2 w-full rounded-[37px] p-2 mt-5 "
+              className="bg-[#FAFAFA] border-2 rounded-[37px] p-2 mt-5 "
             />
-          </div>
 
-
-          <div>
             <button
               type="submit"
-              className=" mt-4 w-full text-white text-lg rounded-[70px] py-2"
-              style={{
-                background:
-                  "linear-gradient(0deg, #0A4D68 8.68%, #05BFDB 140.45%)",
-                transition: "all 0.5s",
-              }}
+              className=" mt-4 md:mt-0 ml-2 lg:ml-5 bg-[#3461FF] text-white rounded-[70px] px-5 py-2"
             >
               Let's Talk
             </button>
           </div>
 
+          <div className="block md:hidden">
+            <div className="mr-5">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                required
+                className="bg-[#FAFAFA] border-2 w-full rounded-[37px] p-2 mt-5 "
+              />
+            </div>
+
+            <div>
+              <button
+                type="submit"
+                className=" mt-4 w-full text-white text-lg rounded-[70px] py-2"
+                style={{
+                  background:
+                    "linear-gradient(0deg, #0A4D68 8.68%, #05BFDB 140.45%)",
+                  transition: "all 0.5s",
+                }}
+              >
+                Let's Talk
+              </button>
+            </div>
           </div>
         </div>
       </div>
