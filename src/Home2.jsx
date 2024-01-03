@@ -68,6 +68,7 @@ import two from "./images/2.svg";
 import three from "./images/3.svg";
 import four from "./images/4.svg";
 import Background from "./images/backgroundcolor.svg";
+import { Link, useNavigate } from "react-router-dom";
 
 const faqs = [
   {
@@ -217,6 +218,8 @@ function Home2() {
     });
   };
 
+  const navigate = useNavigate();
+
   // emailjs
   const sendEmail = (e) => {
     e.preventDefault();
@@ -234,12 +237,16 @@ function Home2() {
         (result) => {
           console.log(result.text);
 
+          setTimeout(() => {
+            navigate("/thankyou");
+          }, 2000);
+
           ReactGA.event({
             category: "Email",
             action: "Send",
             label: "Contact Form",
           });
-
+           
           setFormData({
             name: "",
             phoneNumber: "",
@@ -500,13 +507,14 @@ function Home2() {
               required
               className="bg-transparent border-2 rounded-[37px] p-2 mt-5"
             />
-
+           
             <button
               type="submit"
               className="mt-4 md:mt-0 ml-2 lg:ml-5 bg-[#00D3FF] text-white rounded-[70px] px-5 py-2"
             >
               Let's Talk
             </button>
+           
           </div>
 
           <div className=" pt-5 md:pt-20 lg:col-span-4">
@@ -630,12 +638,14 @@ function Home2() {
                 </div>
 
                 <div className="flex justify-center mt-3">
+                  
                   <button
                     type="submit"
                     className="bg-[#00D3FF] text-white rounded-[70px] px-5 py-2"
                   >
                     Let's Talk
                   </button>
+                  
                 </div>
               </form>
             </div>
@@ -819,12 +829,14 @@ function Home2() {
                 </div>
 
                 <div className="flex justify-center mt-3">
+                  
                   <button
                     type="submit"
                     className="bg-[#00D3FF] text-white rounded-[70px] px-5 py-2"
                   >
                     Let's Talk
                   </button>
+                 
                 </div>
               </form>
             </div>
