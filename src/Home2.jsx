@@ -674,7 +674,7 @@ function Home2() {
               GROW YOUR SALARY UPTO 3x
             </p>
 
-            <div className="mt-8 mr-4">
+            {/* <div className="mt-8 mr-4">
               <input
                 type="email"
                 placeholder="Enter your email"
@@ -695,7 +695,7 @@ function Home2() {
               >
                 Let's Talk
               </button>
-            </div>
+            </div> */}
           </div>
 
           <div className=" md:pt-20 lg:col-span-4">
