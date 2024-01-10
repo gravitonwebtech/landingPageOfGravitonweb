@@ -246,7 +246,7 @@ function Home2() {
             action: "Send",
             label: "Contact Form",
           });
-           
+
           setFormData({
             name: "",
             phoneNumber: "",
@@ -507,14 +507,13 @@ function Home2() {
               required
               className="bg-transparent border-2 rounded-[37px] p-2 mt-5"
             />
-           
+
             <button
               type="submit"
               className="mt-4 md:mt-0 ml-2 lg:ml-5 bg-[#00D3FF] text-white rounded-[70px] px-5 py-2"
             >
               Let's Talk
             </button>
-           
           </div>
 
           <div className=" pt-5 md:pt-20 lg:col-span-4">
@@ -638,14 +637,12 @@ function Home2() {
                 </div>
 
                 <div className="flex justify-center mt-3">
-                  
                   <button
                     type="submit"
                     className="bg-[#00D3FF] text-white rounded-[70px] px-5 py-2"
                   >
                     Let's Talk
                   </button>
-                  
                 </div>
               </form>
             </div>
@@ -680,9 +677,9 @@ function Home2() {
             <p className="w-full sm:text-2xl lg:w-[500px] mt-6 text-white mt-0 mb-0 text-center">
               NO PRIOR TECHNICAL OR AI <br></br> KNOWLEDGE REQUIRED
             </p>
-            <p className="w-full sm:text-2xl lg:w-[500px] mt-6 text-white mt-0 mb-0 text-center">
+            {/* <p className="w-full sm:text-2xl lg:w-[500px] mt-6 text-white mt-0 mb-0 text-center">
               GROW YOUR SALARY UPTO 3x
-            </p>
+            </p> */}
 
             {/* <div className="mt-8 mr-4">
               <input
@@ -710,15 +707,13 @@ function Home2() {
 
           <div className=" md:pt-20 lg:col-span-4">
             <div className="bg-white shadow-2xl p-5 rounded-[4px]">
-              <h1 className="text-black text-xl text-center font-semibold">
-                Get ready to Elevate Your
-                <br />
-                Career to it’s Peak
+              <h1 className="text-black text-xl md:text-2xl text-center font-bold">
+                Registered Now! For Free Demo Classes.
               </h1>
-              <p className="text-[#767676] text-md mt-3">
+              {/* <p className="text-[#767676] text-md mt-3">
                 Kindly Fill your credential to start course counselling with
                 you.
-              </p>
+              </p> */}
 
               <form ref={formRef} onSubmit={sendEmail}>
                 <div className="mb-4">
@@ -829,14 +824,22 @@ function Home2() {
                 </div>
 
                 <div className="flex justify-center mt-3">
-                  
                   <button
                     type="submit"
                     className="bg-[#00D3FF] text-white rounded-[70px] px-5 py-2"
                   >
                     Let's Talk
                   </button>
-                 
+                </div>
+
+                <div className=" mt-3 text-center">
+                  <h1 className="text-xl font-bold">Demo Class Starts In</h1>
+                  <span className="text-3xl md:text-3xl xl:text-4xl font-bold">
+                    {displayTime}
+                  </span>
+                  <h1 className="text-md font-semibold text-[#666666] mt-2">
+                    EveryDay
+                  </h1>
                 </div>
               </form>
             </div>
@@ -2452,36 +2455,15 @@ function Home2() {
       {/* elevator */}
 
       <div className="elevator-image mx-0 md:mx-20 lg:mx-32 xl:mx-48 mt-10 p-5 md:p-10">
-        {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-          <div>
-            <h1 className="text-white">Elevate your Career Today!</h1>
-          </div>
-
-          <div>
-            <p className="text-white">
-              Ready to transform your digital career? Let's create magic
-              together! Signup our services now!
-            </p>
-            <button
-              type="submit"
-              className="mt-4 bg-white text-black font-bold rounded-[70px] px-5 py-2"
-            >
-              SignUp
-            </button>
-          </div>
-        </div> */}
         <div className="">
           <h1 className="hidden md:block text-white text-center">
             Elevate your Career Today!
           </h1>
-          <h1 className="block md:hidden text-4xl text-white text-center">
-            Elevate your <br></br>Career Today!
-          </h1>
-          <p className="text-white text-center mt-2">
+          <p className="hidden md:block text-white text-center mt-2">
             Fillup form to start your journey with us
           </p>
 
-          <div className="bg-white shadow-2xl p-5 rounded-[4px] mx-auto max-w-md">
+          <div className="hidden md:block bg-white shadow-2xl p-5 rounded-[4px] mx-auto max-w-md">
             <h1 className="text-black text-xl text-center font-semibold">
               Get ready to Elevate Your
               <br />
@@ -2607,6 +2589,141 @@ function Home2() {
                   Let's Talk
                 </button>
               </div>
+            </form>
+          </div>
+
+
+          <div className="block md:hidden bg-white shadow-2xl p-5 rounded-[4px] mx-auto max-w-md">
+            <h1 className="text-black text-xl md:text-2xl text-center font-bold">
+                Registered Now! For Free Demo Classes.
+              </h1>
+
+            <form ref={form1Ref} onSubmit={sendEmail1}>
+              <div className="mb-4">
+                <label
+                  className="block text-gray-700 text-md font-semibold"
+                  htmlFor="name"
+                >
+                  Name
+                </label>
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  value={formData1.name}
+                  onChange={handleInputChange1}
+                  className="border-b-2 border-gray-500 focus:outline-none focus:border-blue-500 w-full"
+                  required
+                />
+              </div>
+
+              <div className="mb-4">
+                <label
+                  className="block text-gray-700 text-md font-semibold"
+                  htmlFor="phoneNumber"
+                >
+                  Phone Number
+                </label>
+                <input
+                  id="phoneNumber"
+                  name="phoneNumber"
+                  type="text"
+                  value={formData1.phoneNumber}
+                  onChange={handleInputChange1}
+                  className="border-b-2 border-gray-500 focus:outline-none focus:border-blue-500 w-full"
+                  required
+                />
+              </div>
+
+              <div className="mt-3">
+                <input
+                  type="radio"
+                  id="metro"
+                  className="w-3 h-3 inline-block align-middle"
+                  name="cityType"
+                  value="I am a College Student"
+                  checked={formData1.cityType === "I am a College Student"}
+                  onChange={handleInputChange1}
+                />
+                <label
+                  htmlFor="metro"
+                  className="font-semibold inline-block align-middle ml-2"
+                >
+                  I am a College Student
+                </label>
+              </div>
+
+              <div>
+                <input
+                  type="radio"
+                  id="oth"
+                  className="h-3 w-3 inline-block align-middle"
+                  name="cityType"
+                  value=" I’m a Company Employee"
+                  checked={formData1.cityType === " I’m a Company Employee"}
+                  onChange={handleInputChange1}
+                />
+                <label
+                  htmlFor="oth"
+                  className="font-semibold inline-block align-middle ml-2"
+                >
+                  I’m a Company Employee
+                </label>
+              </div>
+
+              <div className="mb-4 mt-3">
+                <label
+                  className="block text-gray-700 text-md font-semibold"
+                  htmlFor="email"
+                >
+                  Email
+                </label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  value={formData1.email}
+                  onChange={handleInputChange1}
+                  className="border-b-2 border-gray-500 focus:outline-none focus:border-blue-500 w-full"
+                  required
+                />
+              </div>
+
+              <div className="mb-4 mt-3">
+                <label
+                  className="block text-gray-700 text-sm font-bold"
+                  htmlFor="message"
+                >
+                  Message (Optional)
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="1"
+                  value={formData1.message}
+                  onChange={handleInputChange1}
+                  className="border-b-2 border-gray-500 focus:outline-none focus:border-blue-500 w-full"
+                />
+              </div>
+
+              <div className="flex justify-center mt-3">
+                <button
+                  type="submit"
+                  className="bg-[#00D3FF] text-white rounded-[70px] px-5 py-2"
+                >
+                  Let's Talk
+                </button>
+              </div>
+
+              <div className=" mt-3 text-center">
+                  <h1 className="text-xl font-bold">Demo Class Starts In</h1>
+                  <span className="text-3xl md:text-3xl xl:text-4xl font-bold">
+                    {displayTime}
+                  </span>
+                  <h1 className="text-md font-semibold text-[#666666] mt-2">
+                    EveryDay
+                  </h1>
+                </div>
             </form>
           </div>
         </div>
